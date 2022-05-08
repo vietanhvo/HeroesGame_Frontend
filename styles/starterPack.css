@@ -1,0 +1,437 @@
+@import url(https://fonts.googleapis.com/css?family=Akronim);
+
+.page-starter-pack {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.starter-pack-title {
+    background: blue;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(255, 0, 0, 0)),
+        color-stop(45%, #59a1ed),
+        to(rgba(255, 0, 0, 0))
+    );
+    background: -webkit-linear-gradient(
+        left,
+        rgba(255, 0, 0, 0),
+        #59a1ed 45%,
+        rgba(255, 0, 0, 0)
+    );
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0),
+        #59a1ed 45%,
+        rgba(255, 0, 0, 0)
+    );
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.starter-pack-title h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+}
+.starter-pack-title h5 {
+    font-size: 1.5rem;
+}
+.card-egg-wrapper {
+    border: 12px solid #59a1ed;
+    background-color: #59a1ed;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 332px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-egg {
+    width: 320px;
+    height: 100%;
+    min-height: 525px;
+    background-image: url("/assets/img/khung.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto 2rem;
+    padding-bottom: 40px;
+}
+.card-egg,
+.card-egg .card-header {
+    background-color: transparent;
+    border: none;
+}
+.card-egg .card-header {
+    padding: 0;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-egg .card-header img {
+    width: auto !important;
+    height: 100% !important;
+    -webkit-object-fit: contain !important;
+    object-fit: contain !important;
+}
+.card-egg .card-header img.gem-img {
+    max-width: 150px !important;
+    min-width: unset !important;
+}
+.card-egg .card-body {
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+}
+.card-egg .card-body h3 {
+    color: orangered;
+    font-size: 34px;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+}
+.card-egg .card-body .price {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.card-egg .card-body .price-title {
+    /* color: var(--brown); */
+    color: white;
+}
+.card-egg .card-body .price-value,
+.card-egg .card-body .price-value span {
+    color: white;
+    margin-bottom: 0;
+}
+.card-egg .card-body .price-value {
+    display: flex;
+    align-items: center;
+}
+.card-egg .card-body .price-value span {
+    font-size: 20px;
+}
+.card-egg .card-body .price-value img {
+    width: 1.5rem;
+}
+.card-egg .card-body .price-value .purchase {
+    border: 1px solid #59a1ed;
+    border-radius: 5px;
+}
+.card-egg .card-body .price-value .purchase .form-control {
+    padding: 0 10px;
+    height: 28px;
+}
+.card-egg .card-footer {
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+    margin-top: 0;
+}
+.card-egg .card-footer a {
+    color: white;
+}
+.card-egg .card-footer .purchase input {
+    color: #59a1ed;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #59a1ed;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 38px;
+}
+.card-egg .card-footer .purchase input:focus {
+    border: 1px solid #59a1ed;
+}
+.card-egg .card-footer .purchase input::-webkit-input-placeholder {
+    color: var(--brown);
+}
+.card-egg .card-footer .purchase input:-ms-input-placeholder {
+    color: var(--brown);
+}
+.card-egg .card-footer .purchase input::placeholder {
+    color: var(--brown);
+}
+.card-egg .card-footer .purchase button {
+    background-color: transparent;
+    border: 1px solid #59a1ed;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #59a1ed;
+    height: 38px;
+}
+.card-egg .card-footer .purchase button:hover {
+    background-color: #59a1ed;
+    border-color: #59a1ed;
+    color: var(--white);
+}
+
+.btn-connect {
+    background-color: tomato;
+    border: none;
+}
+
+.btn-connect:hover {
+    background-color: #e26753;
+}
+
+/* Blazing text*/
+.fire {
+    height: 100px;
+
+    background-position: center center;
+    background-size: 1000px 200px;
+    border-radius: 10px;
+    font-family: "Akronim";
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+.fire:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.Blazing {
+    display: inline-block;
+    margin: 0;
+
+    color: rgb(255, 115, 0);
+    font-size: 100px;
+    line-height: 50px;
+    min-width: 50px;
+    outline: none;
+    vertical-align: middle;
+
+    text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange,
+        4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+    animation: 2s Blazing infinite alternate linear;
+}
+
+@keyframes Blazing {
+    0% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 0 0 0 yellow,
+            0 0 5px yellow, -2px -5px 5px yellow, 4px -10px 10px yellow;
+    }
+    25% {
+        text-shadow: 0 3px 20px red, 0 0 30px red, 0 0 20px orange,
+            0 0 5px yellow, -2px -5px 5px yellow, 3px -10px 10px yellow,
+            -4px -15px 20px yellow;
+    }
+    50% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 -5px 10px orange,
+            -2px -5px 5px yellow, 3px -10px 10px yellow, -4px -15px 20px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5);
+    }
+    75% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 -5px 10px orange,
+            3px -5px 5px yellow, -4px -10px 10px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5),
+            0px -25px 40px rgba(255, 255, 0, 0);
+    }
+    100% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 0 0 0 yellow,
+            0 0 5px yellow, -2px -5px 5px yellow, 4px -10px 10px yellow;
+    }
+}
+
+.card-shop-ava {
+    position: relative;
+    min-height: 340px;
+}
+
+.card-shop-about {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.card-shop-bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.card-shop-anim {
+    position: absolute;
+    /* width: 100%; */
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* z-index: 2; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.card-shop-img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.card-shop-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-shop-img > div {
+    width: 100%;
+    height: 100%;
+}
+
+.card-shop-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-shop-meta {
+    background-image: url("/assets/images/pages/store/frame-infor.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 235px;
+    padding: 0 23px;
+    position: relative;
+    top: -33px;
+}
+
+.card-shop-name {
+    text-align: center;
+    height: 58px;
+    line-height: 58px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-shop-infor {
+    padding-top: 20px;
+}
+
+.card-shop-action {
+    padding: 0 0 15px 0;
+}
+
+.card-shop-row {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.card-shop-label {
+    font-weight: bold;
+}
+
+.card-shop-button {
+    height: 52px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 46px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.button-connect {
+    background-image: url("/assets/images/pages/store/btn2.png");
+    margin-bottom: 9px;
+}
+
+.button-connect:hover {
+    color: black;
+}
+
+.button-buy {
+    background-image: url("/assets/images/pages/store/btn1.png");
+}
+
+.card-shop-value small {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/**********************************************/
+.modal__hero .card-shop-anim-from,
+.modal__hero--upgrade .card-shop-anim-to {
+    position: absolute;
+    width: 100%;
+    bottom: -74px;
+}
+
+.card-shop-img-vertical {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.card-shop-img-vertical img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-shop-bg-list-market {
+    bottom: -30px;
+}
+
+@media (max-width: 768px) {
+    .modal__hero .card-shop-anim-from,
+    .modal__hero--upgrade .card-shop-anim-to {
+        position: absolute;
+        width: 100%;
+        bottom: -7px;
+    }
+
+    .card-shop-img-vertical {
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-shop-bg-vertical {
+        bottom: -40px;
+    }
+
+    .card-shop-infor {
+        padding-top: 29px;
+    }
+
+    .card-shop-base-from {
+        margin: -30px 10px;
+    }
+
+    .card-shop-base-to {
+        margin: -30px 10px;
+    }
+
+    .card-shop-bg-list-market {
+        bottom: -4px;
+    }
+}

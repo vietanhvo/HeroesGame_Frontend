@@ -1,0 +1,13 @@
+
+bg1.png
+size: 922,294
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fight
+  rotate: false
+  xy: 2, 2
+  size: 918, 290
+  orig: 920, 292
+  offset: 1, 1
+  index: -1

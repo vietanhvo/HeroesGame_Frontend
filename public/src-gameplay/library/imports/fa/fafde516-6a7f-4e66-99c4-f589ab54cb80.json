@@ -1,0 +1,7 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "export_char.atlas",
+  "_objFlags": 0,
+  "_native": "",
+  "text": "\nexport_char.png\nsize: 764,788\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nef/chem1\n  rotate: false\n  xy: 2, 395\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\nef/chem2\n  rotate: false\n  xy: 2, 2\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\nef/chem3\n  rotate: false\n  xy: 382, 395\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\nef/chem4\n  rotate: false\n  xy: 382, 2\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\n\nexport_char2.png\nsize: 764,788\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nef/chem5\n  rotate: false\n  xy: 2, 395\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\nef/chem6\n  rotate: false\n  xy: 2, 2\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\nef/chem7\n  rotate: false\n  xy: 382, 395\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\nef/chem8\n  rotate: false\n  xy: 382, 2\n  size: 378, 391\n  orig: 378, 391\n  offset: 0, 0\n  index: -1\n"
+}

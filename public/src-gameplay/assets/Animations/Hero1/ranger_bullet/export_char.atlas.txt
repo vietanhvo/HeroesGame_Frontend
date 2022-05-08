@@ -1,0 +1,13 @@
+
+export_char.png
+size: 420,180
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/ef_gun/shoot_enemy1
+  rotate: false
+  xy: 2, 2
+  size: 413, 173
+  orig: 543, 180
+  offset: 6, 4
+  index: -1

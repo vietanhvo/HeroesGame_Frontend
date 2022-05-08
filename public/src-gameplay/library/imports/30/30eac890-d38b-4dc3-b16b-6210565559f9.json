@@ -1,0 +1,156 @@
+{
+  "__type__": "sp.SkeletonData",
+  "_name": "export_char",
+  "_objFlags": 0,
+  "_native": "",
+  "_skeletonJson": {
+    "skeleton": {
+      "hash": "3SGNLhj9kGL4QR8YiF9aczIQIng",
+      "spine": "3.8.99",
+      "x": -2232.44,
+      "y": -465.17,
+      "width": 3674.22,
+      "height": 2066.75,
+      "images": "",
+      "audio": "E:/Art_Hai/GameNFT/Spine/Hero1"
+    },
+    "bones": [
+      {
+        "name": "root"
+      },
+      {
+        "name": "bg2",
+        "parent": "root",
+        "length": 142.19,
+        "rotation": -90,
+        "x": -496.8,
+        "y": 1592.05,
+        "scaleX": 1.9137,
+        "scaleY": 1.9137
+      },
+      {
+        "name": "bone3",
+        "parent": "root",
+        "length": 158.36,
+        "rotation": 180,
+        "x": 77.06,
+        "y": -1.09,
+        "scaleX": 0.9658,
+        "scaleY": 0.9658
+      }
+    ],
+    "slots": [
+      {
+        "name": "bg2",
+        "bone": "bg2"
+      },
+      {
+        "name": "ef/ef_gun/shoot_enemy1",
+        "bone": "bone3"
+      },
+      {
+        "name": "ef/ef_gun/shoot_enemy2",
+        "bone": "bone3",
+        "blend": "additive"
+      }
+    ],
+    "skins": [
+      {
+        "name": "default",
+        "attachments": {
+          "ef/ef_gun/shoot_enemy1": {
+            "ef/ef_gun/shoot_enemy1": {
+              "x": 131.12,
+              "y": 0.63,
+              "scaleX": 0.8643,
+              "scaleY": 0.5817,
+              "rotation": 180,
+              "width": 543,
+              "height": 180
+            }
+          },
+          "ef/ef_gun/shoot_enemy2": {
+            "ef/ef_gun/shoot_enemy1": {
+              "x": 101.72,
+              "y": -0.5,
+              "rotation": 180,
+              "width": 543,
+              "height": 180
+            }
+          }
+        }
+      },
+      {
+        "name": "skin3"
+      }
+    ],
+    "animations": {
+      "atk_demo": {
+        "slots": {
+          "bg2": {
+            "attachment": [
+              {
+                "name": null
+              }
+            ]
+          },
+          "ef/ef_gun/shoot_enemy1": {
+            "attachment": [
+              {
+                "name": "ef/ef_gun/shoot_enemy1"
+              }
+            ]
+          },
+          "ef/ef_gun/shoot_enemy2": {
+            "attachment": [
+              {
+                "name": "ef/ef_gun/shoot_enemy1"
+              }
+            ]
+          }
+        },
+        "bones": {
+          "bone3": {
+            "translate": [
+              {},
+              {
+                "time": 0.1,
+                "x": 22.82,
+                "y": -1.14
+              },
+              {
+                "time": 0.2
+              }
+            ],
+            "scale": [
+              {
+                "x": 1.035,
+                "y": 1.035
+              },
+              {
+                "time": 0.1,
+                "x": 1.13,
+                "y": 0.801
+              },
+              {
+                "time": 0.2,
+                "x": 1.035,
+                "y": 1.035
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "_atlasText": "\nexport_char.png\nsize: 420,180\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nef/ef_gun/shoot_enemy1\n  rotate: false\n  xy: 2, 2\n  size: 413, 173\n  orig: 543, 180\n  offset: 6, 4\n  index: -1\n",
+  "textures": [
+    {
+      "__uuid__": "11031b4b-c145-4a58-b43f-f52adbcbb94b"
+    }
+  ],
+  "textureNames": [
+    "export_char.png"
+  ],
+  "scale": 1
+}

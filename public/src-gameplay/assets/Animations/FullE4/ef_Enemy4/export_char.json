@@ -1,0 +1,117 @@
+{
+"skeleton": {
+	"hash": "hL6qNwOB11KfjsEDZQM1nbziqmY",
+	"spine": "3.8.99",
+	"x": -1740.42,
+	"y": -379.55,
+	"width": 2887.41,
+	"height": 1624.17,
+	"images": "",
+	"audio": "E:/Art_Hai/GameNFT/Spine/Enemy/E4"
+},
+"bones": [
+	{ "name": "root" },
+	{
+		"name": "bone2",
+		"parent": "root",
+		"length": 62.77,
+		"rotation": 89.16,
+		"x": -296.72,
+		"y": 5.79,
+		"scaleX": 1.5039,
+		"scaleY": 1.5039
+	},
+	{ "name": "bone3", "parent": "root", "length": 128.07, "rotation": 1.08, "x": 887.34, "y": 126.9 }
+],
+"slots": [
+	{ "name": "bg2", "bone": "bone2" },
+	{ "name": "ef/chem1", "bone": "bone3", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"ef/chem1": {
+				"ef/chem1": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 },
+				"ef/chem2": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 },
+				"ef/chem3": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 },
+				"ef/chem4": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 },
+				"ef/chem5": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 },
+				"ef/chem6": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 },
+				"ef/chem7": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 },
+				"ef/chem8": { "x": 4.13, "y": 37.86, "rotation": -1.08, "width": 755, "height": 782 }
+			}
+		}
+	}
+],
+"animations": {
+	"Die": {
+		"bones": {
+			"root": {
+				"scale": [
+					{ "time": 1.1667 }
+				]
+			}
+		}
+	},
+	"Hit": {
+		"bones": {
+			"root": {
+				"scale": [
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"atk": {
+		"slots": {
+			"ef/chem1": {
+				"color": [
+					{ "time": 0.0667, "color": "ffffffff" },
+					{ "time": 0.1, "color": "b26bffff" },
+					{ "time": 0.1333, "color": "f8fffcff" }
+				],
+				"attachment": [
+					{ "name": "ef/chem1" },
+					{ "time": 0.0333, "name": "ef/chem2" },
+					{ "time": 0.0667, "name": "ef/chem3" },
+					{ "time": 0.1, "name": "ef/chem4" },
+					{ "time": 0.1333, "name": "ef/chem5" },
+					{ "time": 0.1667, "name": "ef/chem6" },
+					{ "time": 0.2, "name": "ef/chem7" },
+					{ "time": 0.2333, "name": "ef/chem8" },
+					{ "time": 0.2667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone3": {
+				"translate": [
+					{ "x": -899.14, "y": -113.21 }
+				],
+				"scale": [
+					{ "x": 0.731, "y": 0.731 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"bones": {
+			"root": {
+				"scale": [
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	},
+	"run": {
+		"bones": {
+			"root": {
+				"scale": [
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

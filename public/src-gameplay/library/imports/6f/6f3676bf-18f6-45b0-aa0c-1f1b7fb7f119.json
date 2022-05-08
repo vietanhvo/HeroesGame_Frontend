@@ -1,0 +1,7 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "export_char.atlas",
+  "_objFlags": 0,
+  "_native": "",
+  "text": "\nexport_char.png\nsize: 420,180\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nef/ef_gun/shoot_enemy1\n  rotate: false\n  xy: 2, 2\n  size: 413, 173\n  orig: 543, 180\n  offset: 6, 4\n  index: -1\n"
+}
