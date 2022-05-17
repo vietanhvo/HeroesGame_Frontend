@@ -13,10 +13,11 @@ import "../styles/custom.css";
 import "../styles/mybag.css";
 import "../styles/header.css";
 import "../styles/modal.css";
+import "../styles/auth.css";
 
 const MyApp = ({ Component, pageProps }) => {
     return (
-        <Layout>
+        <Layout auth={false}>
             <Component {...pageProps} />
         </Layout>
     );
