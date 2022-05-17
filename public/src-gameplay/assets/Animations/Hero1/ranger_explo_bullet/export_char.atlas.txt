@@ -1,0 +1,76 @@
+
+export_char.png
+size: 852,412
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/ef_gun/explo1
+  rotate: false
+  xy: 304, 16
+  size: 149, 154
+  orig: 173, 187
+  offset: 3, 7
+  index: -1
+ef/ef_gun/explo2
+  rotate: false
+  xy: 2, 2
+  size: 151, 157
+  orig: 173, 187
+  offset: 6, 5
+  index: -1
+ef/ef_gun/explo2_1
+  rotate: false
+  xy: 601, 51
+  size: 104, 180
+  orig: 252, 237
+  offset: 125, 31
+  index: -1
+ef/ef_gun/explo2_2
+  rotate: true
+  xy: 2, 161
+  size: 248, 228
+  orig: 252, 237
+  offset: 1, 3
+  index: -1
+ef/ef_gun/explo2_3
+  rotate: true
+  xy: 413, 174
+  size: 235, 180
+  orig: 252, 237
+  offset: 9, 28
+  index: -1
+ef/ef_gun/explo2_4
+  rotate: false
+  xy: 595, 233
+  size: 229, 176
+  orig: 252, 237
+  offset: 12, 30
+  index: -1
+ef/ef_gun/explo2_5
+  rotate: true
+  xy: 232, 172
+  size: 237, 179
+  orig: 252, 237
+  offset: 8, 29
+  index: -1
+ef/ef_gun/explo3
+  rotate: false
+  xy: 155, 4
+  size: 147, 155
+  orig: 173, 187
+  offset: 5, 6
+  index: -1
+ef/ef_gun/explo4
+  rotate: false
+  xy: 455, 24
+  size: 144, 148
+  orig: 173, 187
+  offset: 8, 13
+  index: -1
+ef/ef_gun/explo5
+  rotate: false
+  xy: 707, 93
+  size: 140, 138
+  orig: 173, 187
+  offset: 9, 16
+  index: -1

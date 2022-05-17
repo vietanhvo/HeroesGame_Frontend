@@ -1,0 +1,7 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "export_char.atlas",
+  "_objFlags": 0,
+  "_native": "",
+  "text": "\nexport_char.png\nsize: 356,660\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nbody\n  rotate: false\n  xy: 2, 285\n  size: 349, 373\n  orig: 350, 373\n  offset: 1, 0\n  index: -1\ndau\n  rotate: true\n  xy: 2, 126\n  size: 207, 215\n  orig: 209, 216\n  offset: 0, 1\n  index: -1\ntay1\n  rotate: 180\n  xy: 44, 3\n  size: 184, 135\n  orig: 186, 135\n  offset: 2, 0\n  index: -1\ntay2\n  rotate: true\n  xy: 208, 74\n  size: 210, 111\n  orig: 210, 112\n  offset: 0, 0\n  index: -1\n"
+}

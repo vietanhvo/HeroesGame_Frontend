@@ -1,0 +1,56 @@
+{ "skeleton": { "images": "/e/Art_Hai/GameNFT/Export_DApp/FIGHTING/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "bg2", "bone": "root", "attachment": "bg2" },
+	{ "name": "bg1", "bone": "root", "attachment": "bg1" },
+	{ "name": "beEnemy", "bone": "root", "attachment": "beEnemy" },
+	{ "name": "beHero", "bone": "root", "attachment": "beHero" },
+	{ "name": "Layer 76", "bone": "root", "attachment": "Layer 76" },
+	{ "name": "back", "bone": "root", "attachment": "back" },
+	{ "name": "next", "bone": "root", "attachment": "next" },
+	{ "name": "SKill", "bone": "root", "attachment": "SKill" },
+	{ "name": "warrior", "bone": "root", "attachment": "warrior" },
+	{ "name": "assasin", "bone": "root", "attachment": "assasin" },
+	{ "name": "ranger", "bone": "root", "attachment": "ranger" }
+],
+"skins": {
+	"default": {
+		"bg2": {
+			"bg2": { "x": 960, "y": -1472.5, "width": 1922, "height": 787 }
+		},
+		"bg1": {
+			"bg1": { "x": 960, "y": -583.5, "width": 1922, "height": 1169 }
+		},
+		"beEnemy": {
+			"beEnemy": { "x": 1178.5, "y": -1052, "width": 353, "height": 494 }
+		},
+		"beHero": {
+			"beHero": { "x": 982, "y": -526.5, "width": 506, "height": 519 }
+		},
+		"Layer 76": {
+			"Layer 76": { "x": 938.5, "y": -483, "width": 239, "height": 328 }
+		},
+		"back": {
+			"back": { "x": 632.5, "y": -717, "width": 193, "height": 196 }
+		},
+		"next": {
+			"next": { "x": 1324.5, "y": -717, "width": 193, "height": 196 }
+		},
+		"SKill": {
+			"SKill": { "x": 564, "y": -452, "width": 374, "height": 420 }
+		},
+		"warrior": {
+			"warrior": { "x": 389, "y": -453, "width": 184, "height": 184 }
+		},
+		"assasin": {
+			"assasin": { "x": 389, "y": -453, "width": 184, "height": 184 }
+		},
+		"ranger": {
+			"ranger": { "x": 389, "y": -453, "width": 184, "height": 184 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

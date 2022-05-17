@@ -1,0 +1,363 @@
+.header-section.header-fixed .navbar-collapse .main-menu li a {
+    padding: 5px 18px;
+}
+
+.header-btn {
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+.header-btn button {
+    border-radius: 20px;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.navbar-collapse .main-menu li a {
+    font-size: 14px;
+}
+
+.page-header {
+    padding: 0;
+}
+
+.page-fight-monster {
+    margin-top: 30px;
+}
+
+.choose-monster {
+    margin-top: 35px;
+}
+
+.footer-section {
+    padding: 15px;
+}
+
+.footer-content {
+    padding-bottom: 0;
+}
+
+.footer-content .title {
+    margin-bottom: 0;
+}
+
+.logo-footer {
+    display: block;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    margin-left: -100px;
+    margin-bottom: 0;
+}
+
+.logo-footer {
+    width: 200px;
+    height: 75px;
+}
+
+.footer-content .sub-title {
+    color: #fff;
+}
+
+.footer-social-icon li a {
+    width: 45px;
+    height: 45px;
+}
+
+.footer-social-icon li + li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.card-monster .card-monster__img {
+    background-image: url(/assets/images/pages/fight-monster/beEnemy.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 330px;
+}
+
+.card-monster .card-title {
+    margin-top: -0.75rem;
+}
+
+.card-monster .card-body {
+    border: none;
+    background-image: url(/assets/images/pages/fight-monster/KhungInfo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.card-monster .card-body button {
+    background-image: url(/assets/images/pages/fight-monster/btn2.png);
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.hero-skills {
+    position: relative;
+}
+
+.hero-skills .main-skill {
+    position: absolute;
+    right: 190px;
+    top: 85px;
+    height: 134px;
+}
+
+.hero-skills .skills {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    height: 300px;
+}
+
+.hero-img {
+    top: -20px;
+}
+
+.card-shop-prev {
+    position: absolute;
+    bottom: -35px;
+    left: -70px;
+    z-index: 1;
+    display: block;
+}
+
+.card-shop-prev button {
+    background-image: url(/assets/images/pages/fight-monster/back.png);
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 50px;
+    text-indent: -9999999999px;
+}
+
+.card-shop-next {
+    position: absolute;
+    bottom: -35px;
+    right: -70px;
+    z-index: 1;
+    display: block;
+}
+
+.card-shop-next button {
+    background-image: url(/assets/images/pages/fight-monster/next.png);
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 50px;
+    text-indent: -9999999999px;
+}
+
+.page-fight-monster .card-shop .card-shop-meta {
+    min-height: 250px;
+    padding: 0 20px;
+    top: 0px;
+}
+
+.page-fight-monster .card-shop .card-shop-meta .card-shop-infor {
+    padding-top: 0;
+}
+
+.page-fight-monster .card-shop .card-shop-meta .card-shop-row {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.page-fight-monster
+    .card-shop
+    .card-shop-meta
+    .card-shop-action
+    .card-shop-button {
+    height: 40px;
+    line-height: 30px;
+}
+
+.fight-monster-list {
+    margin-top: 50px;
+}
+.fight-pvp-list {
+    margin-top: 30px;
+}
+.fight-pvp-title {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.modal-fighting .modal-content {
+    background: url(/assets/images/pages/my-bag/frame.png) center center
+        no-repeat;
+    background-size: 100% 100%;
+}
+
+.modal-fighting .modal-header {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.modal-fighting .modal-header .modal-title {
+    width: 100%;
+    margin-bottom: 0;
+}
+.modal-fighting .modal-body {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 1rem 2.5rem 2rem;
+}
+
+.modal-fighting .close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: red;
+    padding: 0 !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    margin: 0;
+}
+
+.swal2-container.swal2-center > .swal2-popup {
+    background-image: url("/assets/images/pages/my-bag/frame.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+}
+.swal2-container.swal2-backdrop-show {
+    background: rgba(0, 0, 0, 0.8);
+}
+.swal2-icon {
+    margin: 4.5em auto 0.6em;
+}
+
+.swal2-title {
+    color: white !important;
+}
+
+@media (max-width: 1023px) {
+    .header-btn {
+        position: unset;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .hero-skills {
+        min-height: 300px;
+    }
+    .hero-skills .skills {
+        top: 1px;
+        right: 35px;
+    }
+    .hero-skills .main-skill {
+        right: 225px;
+        top: 85px;
+    }
+    .card-shop-prev {
+        bottom: 100px;
+        left: 0;
+    }
+    .card-shop-next {
+        bottom: 100px;
+        right: 0;
+    }
+
+    .modal-fighting .modal-body {
+        padding: 1rem;
+    }
+
+    .modal-fighting .modal-dialog {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-section.header-fixed .header-btn {
+        top: 5px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero-skills .main-skill {
+        position: absolute;
+        right: 154px;
+        top: 69px;
+        height: 105px;
+    }
+    .hero-skills .skills {
+        position: absolute;
+        top: 1px;
+        right: 0;
+        height: 240px;
+    }
+}
+
+.back-btn {
+    background-color: transparent;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.back-btn:hover,
+.back-btn:focus,
+.back-btn:active {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+
+.next-btn {
+    background-color: transparent;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.next-btn:hover,
+.next-btn:focus,
+.next-btn:active {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+.sound-btn {
+    position: fixed;
+    background-image: url("/assets/images/pages/marketplace/icon-uncheck.png");
+    background-color: transparent;
+    width: 53px;
+    height: 52px;
+    bottom: 4%;
+    padding-top: 6px;
+    padding-left: 7px;
+    left: 3%;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+

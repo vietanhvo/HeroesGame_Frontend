@@ -1,0 +1,89 @@
+/* Pages */
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1400px;
+    }
+}
+
+.btn-new {
+    border-radius: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.btn-primary-new {
+    color: white;
+    background: #59a1ed;
+    border-radius: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.btn-primary-new:hover {
+    color: white;
+    background: #d71800;
+    border-color: #d71800;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.page-content {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.page-header {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    color: #59a1ed;
+}
+
+.page-header span {
+    font-size: 40px;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #000000b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.loading.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease-in-out;
+}

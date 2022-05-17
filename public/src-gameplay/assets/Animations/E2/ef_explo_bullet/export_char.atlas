@@ -1,0 +1,118 @@
+
+export_char.png
+size: 996,868
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/expo_bom_1
+  rotate: false
+  xy: 523, 93
+  size: 149, 155
+  orig: 178, 178
+  offset: 16, 11
+  index: -1
+ef/expo_bom_2
+  rotate: true
+  xy: 2, 2
+  size: 248, 257
+  orig: 296, 297
+  offset: 27, 20
+  index: -1
+ef/expo_bom_3
+  rotate: false
+  xy: 678, 541
+  size: 313, 322
+  orig: 369, 369
+  offset: 33, 24
+  index: -1
+ef/expo_bom_4
+  rotate: true
+  xy: 2, 519
+  size: 344, 355
+  orig: 391, 391
+  offset: 27, 16
+  index: -1
+ef/expo_bom_5
+  rotate: false
+  xy: 359, 519
+  size: 317, 344
+  orig: 391, 451
+  offset: 41, 76
+  index: -1
+ef/expo_bom_6
+  rotate: false
+  xy: 678, 238
+  size: 294, 301
+  orig: 373, 380
+  offset: 38, 42
+  index: -1
+ef/expo_bom_7
+  rotate: false
+  xy: 308, 250
+  size: 264, 267
+  orig: 338, 357
+  offset: 37, 50
+  index: -1
+ef/expo_bom_8
+  rotate: true
+  xy: 261, 8
+  size: 240, 260
+  orig: 243, 262
+  offset: 3, 1
+  index: -1
+ef/fire_enemy2_1
+  rotate: true
+  xy: 574, 282
+  size: 46, 72
+  orig: 55, 83
+  offset: 4, 6
+  index: -1
+ef/fire_enemy2_2
+  rotate: false
+  xy: 939, 99
+  size: 54, 137
+  orig: 64, 147
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_3
+  rotate: true
+  xy: 674, 32
+  size: 66, 182
+  orig: 76, 191
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_4
+  rotate: false
+  xy: 574, 330
+  size: 68, 187
+  orig: 79, 196
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_5
+  rotate: true
+  xy: 674, 100
+  size: 67, 192
+  orig: 79, 203
+  offset: 6, 5
+  index: -1
+ef/fire_enemy2_6
+  rotate: true
+  xy: 674, 169
+  size: 67, 196
+  orig: 79, 206
+  offset: 6, 5
+  index: -1
+ef/fire_enemy2_7
+  rotate: false
+  xy: 872, 41
+  size: 65, 195
+  orig: 77, 208
+  offset: 6, 6
+  index: -1
+ef/light
+  rotate: false
+  xy: 2, 252
+  size: 304, 265
+  orig: 364, 311
+  offset: 26, 25
+  index: -1
