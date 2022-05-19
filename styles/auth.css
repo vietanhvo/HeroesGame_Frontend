@@ -111,12 +111,15 @@
 }
 
 .gender-container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
     width: 60%;
     float: right;
     padding: 12px 0 12px 0;
+}
+
+.gender-input-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .gender-radio {
@@ -154,4 +157,15 @@
     width: 20px;
     height: 15px;
     margin-right: 10px;
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    transform: translateY(-14px);
+}
+
+.gender-error-msg {
+    color: red;
+    font-size: 14px;
 }

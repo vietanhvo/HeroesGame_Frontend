@@ -3,13 +3,14 @@ import { useRouter } from "next/router";
 import { Button, Col, Row } from "react-bootstrap";
 import * as Yup from "yup";
 import { Formik, Form, Field, FastField } from "formik";
-import axios from "./api/axios";
 import InputField from "../components/custom-fields/InputField";
 
 const loginSchema = Yup.object().shape({
-    email: Yup.string().required("Email is required"),
+    email: Yup.string()
+        .email("You must input a valid email")
+        .required("Email is required"),
     password: Yup.string()
-        .min(6, "password must be longer than 6 characters")
+        .min(8, "password must be longer than 8 characters")
         .required("password is required"),
 });
 
@@ -31,7 +32,7 @@ export default function Login() {
                             initialValues={initialValues}
                             validationSchema={loginSchema}
                             onSubmit={(values) => {
-                                console.log(values);
+                                console.log("Submit: " + values);
                             }}
                         >
                             {(formikProps) => {

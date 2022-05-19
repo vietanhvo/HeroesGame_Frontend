@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import GenderRadio from "../GenderRadio";
+import { ErrorMessage } from "formik";
 
 RadioField.propTypes = {
     field: PropTypes.object.isRequired,
@@ -23,28 +24,34 @@ export default function RadioField(props) {
 
     return (
         <div className="gender-container">
-            <label>{label}</label>
+            <div className="gender-input-container">
+                <label>{label}</label>
 
-            <GenderRadio
+                <GenderRadio
+                    name={name}
+                    gender={value}
+                    id="male"
+                    label="Male"
+                    onGenderChange={handleGenderChange}
+                />
+                <GenderRadio
+                    name={name}
+                    gender={value}
+                    id="female"
+                    label="Female"
+                    onGenderChange={handleGenderChange}
+                />
+                <GenderRadio
+                    name={name}
+                    gender={value}
+                    id="other"
+                    label="Other"
+                    onGenderChange={handleGenderChange}
+                />
+            </div>
+            <ErrorMessage
                 name={name}
-                gender={value}
-                id="male"
-                label="Male"
-                onGenderChange={handleGenderChange}
-            />
-            <GenderRadio
-                name={name}
-                gender={value}
-                id="female"
-                label="Female"
-                onGenderChange={handleGenderChange}
-            />
-            <GenderRadio
-                name={name}
-                gender={value}
-                id="other"
-                label="Other"
-                onGenderChange={handleGenderChange}
+                render={(msg) => <div className="gender-error-msg">{msg}</div>}
             />
         </div>
     );

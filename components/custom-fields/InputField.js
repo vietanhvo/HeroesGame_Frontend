@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { ErrorMessage } from "formik";
 
 InputField.propTypes = {
     // Formik
@@ -31,6 +32,8 @@ InputField.defaultProps = {
 export default function InputField(props) {
     const {
         field,
+        form,
+
         type,
         label,
         labelBehind,
@@ -41,6 +44,8 @@ export default function InputField(props) {
         inputClassName,
     } = props;
     const { name } = field;
+    const { errors, touched } = form;
+    const showErrors = errors[name] && touched[name];
 
     return (
         <div className={containerClassName}>
@@ -62,6 +67,10 @@ export default function InputField(props) {
                     {label}
                 </label>
             )}
+            <ErrorMessage
+                name={name}
+                render={(msg) => <div className="error-msg">{msg}</div>}
+            />
         </div>
     );
 }

@@ -1,9 +1,29 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button, Col, Row } from "react-bootstrap";
+import * as Yup from "yup";
 import { Formik, Form, FastField } from "formik";
 import InputField from "../components/custom-fields/InputField";
 import RadioField from "../components/custom-fields/RadioField";
+
+const registerSchema = Yup.object().shape({
+    first_name: Yup.string().required("First name is required"),
+    surname: Yup.string().required("Surname is required"),
+    email: Yup.string()
+        .email("You must input a valid email")
+        .required("Email is required"),
+    date_of_birth: Yup.date().required("Date of birth is required"),
+    gender: Yup.string().required("Gender is required"),
+    password: Yup.string()
+        .min(8, "password must be longer than 8 characters")
+        .required("password is required"),
+    confirm_password: Yup.string()
+        .oneOf(
+            [Yup.ref("password"), null],
+            "Confirm password must match password"
+        )
+        .required("Confirm password is required"),
+});
 
 export default function Register() {
     const router = useRouter();
@@ -28,6 +48,7 @@ export default function Register() {
                         <div className="form-subtitle">It's quick and easy</div>
                         <Formik
                             initialValues={initialValues}
+                            validationSchema={registerSchema}
                             onSubmit={(values) => {
                                 console.log(values);
                             }}
