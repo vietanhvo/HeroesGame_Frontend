@@ -69,12 +69,12 @@
     align-items: center;
 }
 
-#remember-checkbox {
+.remember-checkbox {
     width: 20px;
     height: 15px;
 }
 
-#remember-label {
+.remember-label {
     margin: 10px;
 }
 
@@ -105,12 +105,12 @@
     text-transform: capitalize;
 }
 
-#date-of-birth-container {
+.date-of-birth-container {
     width: 35%;
     float: left;
 }
 
-#gender-container {
+.gender-container {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -144,13 +144,13 @@
     width: 100%;
 }
 
-#agree-terms-container {
+.agree-terms-container {
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-#agree-terms {
+.agree-terms-input {
     width: 20px;
     height: 15px;
     margin-right: 10px;
