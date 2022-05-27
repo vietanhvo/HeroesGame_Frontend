@@ -16,6 +16,7 @@ import "../styles/modal.css";
 import "../styles/auth.css";
 
 const MyApp = ({ Component, pageProps }) => {
+    // const [auth, setAuth] = useState(false);
 
     return (
         <Layout auth={false}>
