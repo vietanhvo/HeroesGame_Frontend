@@ -30,21 +30,21 @@ export default function RadioField(props) {
                 <GenderRadio
                     name={name}
                     gender={value}
-                    id="male"
+                    id="m"
                     label="Male"
                     onGenderChange={handleGenderChange}
                 />
                 <GenderRadio
                     name={name}
                     gender={value}
-                    id="female"
+                    id="f"
                     label="Female"
                     onGenderChange={handleGenderChange}
                 />
                 <GenderRadio
                     name={name}
                     gender={value}
-                    id="other"
+                    id="o"
                     label="Other"
                     onGenderChange={handleGenderChange}
                 />

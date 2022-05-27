@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { Formik, Form, FastField } from "formik";
 import InputField from "../components/custom-fields/InputField";
 import RadioField from "../components/custom-fields/RadioField";
+import axios from "./api/axios";
 
 const registerSchema = Yup.object().shape({
     first_name: Yup.string().required("First name is required"),
@@ -23,6 +24,10 @@ const registerSchema = Yup.object().shape({
             "Confirm password must match password"
         )
         .required("Confirm password is required"),
+    agree_terms: Yup.bool().oneOf(
+        [true],
+        "You must agree to all terms and conditions"
+    ),
 });
 
 export default function Register() {
@@ -49,13 +54,14 @@ export default function Register() {
                         <Formik
                             initialValues={initialValues}
                             validationSchema={registerSchema}
-                            onSubmit={(values) => {
-                                console.log(values);
+                            onSubmit={async (values) => {
+                                let res = await axios.post("/api/register", values);
+                                console.log(res);
                             }}
                         >
                             {(formikProps) => {
-                                const { values, errors, touched } = formikProps;
-                                console.log({ values, errors, touched });
+                                // const { values, errors, touched } = formikProps;
+                                // console.log({ values, errors, touched });
 
                                 return (
                                     <Form className="form-body">
@@ -117,8 +123,8 @@ export default function Register() {
                                             label="I agree to all Terms, Data Policy and Cookie Policy"
                                             labelBehind={true}
                                             type="checkbox"
-                                            containerClassName="agree-terms-container"
                                             inputClassName="agree-terms-input"
+                                            labelClassName="agree-terms-label"
                                         />
 
                                         <div className="btn-container">

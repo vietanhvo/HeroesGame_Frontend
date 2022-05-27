@@ -147,16 +147,16 @@
     width: 100%;
 }
 
-.agree-terms-container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.agree-terms-label {
+    margin-bottom: 20px;
 }
 
 .agree-terms-input {
     width: 20px;
     height: 15px;
     margin-right: 10px;
+    margin-bottom: 10px;
+    transform: translateY(2px);
 }
 
 .error-msg {

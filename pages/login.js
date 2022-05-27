@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import { Button, Col, Row } from "react-bootstrap";
 import * as Yup from "yup";
-import { Formik, Form, Field, FastField } from "formik";
+import { Formik, Form, FastField } from "formik";
 import InputField from "../components/custom-fields/InputField";
+import axios from "./api/axios";
 
 const loginSchema = Yup.object().shape({
     email: Yup.string()
@@ -31,14 +32,15 @@ export default function Login() {
                         <Formik
                             initialValues={initialValues}
                             validationSchema={loginSchema}
-                            onSubmit={(values) => {
-                                console.log("Submit: " + values);
+                            onSubmit={async (values) => {
+                                let res = await axios.post("/api/login", {
+                                    email: values.email,
+                                    password: values.password,
+                                });
+                                console.log(res);
                             }}
                         >
                             {(formikProps) => {
-                                const { values, errors, touched } = formikProps;
-                                console.log({ values, errors, touched });
-
                                 return (
                                     <Form className="form-body">
                                         <FastField
@@ -83,9 +85,7 @@ export default function Login() {
                             <Button
                                 variant="success"
                                 id="navigate-btn"
-                                onClick={() => {
-                                    router.push("/register");
-                                }}
+                                onClick={() => router.push("/register")}
                             >
                                 Create New Account
                             </Button>
