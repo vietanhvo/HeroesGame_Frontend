@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { Formik, Form, FastField } from "formik";
 import InputField from "../components/custom-fields/InputField";
 import RadioField from "../components/custom-fields/RadioField";
-import axios from "./api/axios";
+import axios from "../api/axios";
 
 const registerSchema = Yup.object().shape({
     first_name: Yup.string().required("First name is required"),

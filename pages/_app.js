@@ -15,13 +15,18 @@ import "../styles/header.css";
 import "../styles/modal.css";
 import "../styles/auth.css";
 
-const MyApp = ({ Component, pageProps }) => {
-    // const [auth, setAuth] = useState(false);
+import { Provider as AuthProvider } from "../context/AuthContext";
+import RouteGuard from "../components/RouteGuard";
 
+const MyApp = ({ Component, pageProps }) => {
     return (
-        <Layout auth={false}>
-            <Component {...pageProps} />
-        </Layout>
+        <AuthProvider>
+            <RouteGuard>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </RouteGuard>
+        </AuthProvider>
     );
 };
 

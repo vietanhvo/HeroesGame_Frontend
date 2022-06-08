@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Head from "next/head";
 import Header from "./Header";
 import AuthHeader from "./AuthHeader";
 
-export default function Layout({ children, auth }) {
+import { Context as AuthContext } from "../context/AuthContext";
+
+export default function Layout({ children }) {
+    const { auth } = useContext(AuthContext);
+
     return (
         <>
             {auth ? (

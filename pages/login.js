@@ -4,7 +4,7 @@ import { Button, Col, Row } from "react-bootstrap";
 import * as Yup from "yup";
 import { Formik, Form, FastField } from "formik";
 import InputField from "../components/custom-fields/InputField";
-import axios from "./api/axios";
+import axios from "../api/axios";
 
 const loginSchema = Yup.object().shape({
     email: Yup.string()
