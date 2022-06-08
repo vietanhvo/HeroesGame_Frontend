@@ -33,11 +33,11 @@ export default function Login() {
                             initialValues={initialValues}
                             validationSchema={loginSchema}
                             onSubmit={async (values) => {
-                                let res = await axios.post("/api/login", {
-                                    email: values.email,
-                                    password: values.password,
-                                });
-                                console.log(res);
+                                let res = await axios.post(
+                                    "/api/login",
+                                    values
+                                );
+                                console.log(res.status);
                             }}
                         >
                             {(formikProps) => {
