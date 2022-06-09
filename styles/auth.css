@@ -69,12 +69,12 @@
     align-items: center;
 }
 
-#remember-checkbox {
+.remember-checkbox {
     width: 20px;
     height: 15px;
 }
 
-#remember-label {
+.remember-label {
     margin: 10px;
 }
 
@@ -105,18 +105,21 @@
     text-transform: capitalize;
 }
 
-#date-of-birth-container {
+.date-of-birth-container {
     width: 35%;
     float: left;
 }
 
-#gender-container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.gender-container {
     width: 60%;
     float: right;
     padding: 12px 0 12px 0;
+}
+
+.gender-input-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .gender-radio {
@@ -144,14 +147,25 @@
     width: 100%;
 }
 
-#agree-terms-container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.agree-terms-label {
+    margin-bottom: 20px;
 }
 
-#agree-terms {
+.agree-terms-input {
     width: 20px;
     height: 15px;
     margin-right: 10px;
+    margin-bottom: 10px;
+    transform: translateY(2px);
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    transform: translateY(-14px);
+}
+
+.gender-error-msg {
+    color: red;
+    font-size: 14px;
 }

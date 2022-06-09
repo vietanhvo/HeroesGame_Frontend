@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Row, Col, Tab, Nav, Form } from "react-bootstrap";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -46,7 +46,8 @@ const getImagePack = (pack) => {
 };
 
 export default function StarterPack() {
-    const defaultKeyParam = useRouter().query.defaultKey;
+    const router = useRouter();
+    const defaultKeyParam = router.query.defaultKey;
     const defaultKey = defaultKeyParam ? defaultKeyParam : "heroes";
 
     const isBox = (pack) => (pack.type === "box" ? true : false);
