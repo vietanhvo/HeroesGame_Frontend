@@ -1,7 +1,16 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
+import React, { useEffect, useContext } from "react";
 import { Container, Nav, Tab } from "react-bootstrap";
 
+import { Context as AuthContext } from "../context/AuthContext";
+import { Context as HeroContext } from "../context/HeroContext";
+
 export default function MyBag() {
+    const { state } = useContext(AuthContext);
+    const { loadHeroes } = useContext(HeroContext);
+    useEffect(() => {
+        loadHeroes(state.user_id);
+    }, []);
+
     return (
         <div className="page-content page-starter-pack">
             <Container>
