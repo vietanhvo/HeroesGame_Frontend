@@ -13,6 +13,7 @@ const authReducer = (state, action) => {
             return {
                 errorMessage: "",
                 auth: true,
+                user_id: action.payload.user_id,
                 email: action.payload.email,
                 first_name: action.payload.first_name,
                 surname: action.payload.surname,
@@ -24,6 +25,7 @@ const authReducer = (state, action) => {
             return {
                 errorMessage: "",
                 auth: false,
+                user_id: "",
                 email: "",
                 first_name: "",
                 surname: "",
@@ -45,7 +47,7 @@ const login = (dispatch) => {
         // make api request to signup
         setLoading(true);
         try {
-            const res = await axios.post("/api/login", {
+            const res = await axios.post("/auth/login", {
                 email,
                 password,
                 remember,
@@ -54,6 +56,7 @@ const login = (dispatch) => {
             dispatch({
                 type: "login",
                 payload: {
+                    user_id: res.data.user_id,
                     email: res.data.email,
                     first_name: res.data.first_name,
                     surname: res.data.surname,
@@ -76,7 +79,7 @@ const login = (dispatch) => {
 const tryTokenLogin = (dispatch) => {
     return async () => {
         try {
-            const res = await axios.get("/api/token");
+            const res = await axios.get("/auth/token");
             console.log(res.data);
             dispatch({
                 type: "login",
@@ -91,7 +94,7 @@ const tryTokenLogin = (dispatch) => {
 const logout = (dispatch) => async () => {
     setLoading(true);
     try {
-        const res = await axios.get("/api/logout");
+        const res = await axios.get("/auth/logout");
         console.log(res.data);
         dispatch({ type: "logout" });
     } catch (err) {
@@ -105,9 +108,10 @@ const logout = (dispatch) => async () => {
 
 const register =
     (dispatch) =>
-    async ({ first_name, surname, email, date_of_birth, gender }) => {
+    async ({ first_name, surname, email, date_of_birth, gender, password }) => {
+        setLoading(true);
         try {
-            const res = await axios.post("/api/register", {
+            const res = await axios.post("/auth/register", {
                 first_name,
                 surname,
                 email,
@@ -123,6 +127,7 @@ const register =
                 payload: "Something went wrong with register account",
             });
         }
+        setLoading(false);
     };
 
 export const { Provider, Context } = createDataContext(
@@ -131,6 +136,7 @@ export const { Provider, Context } = createDataContext(
     {
         errorMessage: "",
         auth: false,
+        user_id: "",
         email: "",
         first_name: "",
         surname: "",

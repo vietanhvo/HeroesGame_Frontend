@@ -3,18 +3,25 @@ import { Container, Row, Col, Tab, Nav, Form } from "react-bootstrap";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+import { Context as AuthContext } from "../context/AuthContext";
+import { Context as HeroContext } from "../context/HeroContext";
+
 const packData = [
     {
-        name: "ANH VIET",
-        price: "7,000",
+        name: "Anh Viet",
+        class_id: 1,
+        class: "Shooter",
+        price: 7000,
         image: "/assets/img/dapp/heros/0/R1.gif",
         type: "hero",
         hero: 0,
         level: 1,
     },
     {
-        name: "ANH TAI",
-        price: "7,000",
+        name: "Anh Tai",
+        class_id: 2,
+        class: "Tanker",
+        price: 7000,
         type: "hero",
         image: "/assets/img/dapp/heros/1/R1.gif",
         hero: 1,
@@ -49,6 +56,9 @@ export default function StarterPack() {
     const router = useRouter();
     const defaultKeyParam = router.query.defaultKey;
     const defaultKey = defaultKeyParam ? defaultKeyParam : "heroes";
+
+    const { state } = useContext(AuthContext);
+    const { buyHero } = useContext(HeroContext);
 
     const isBox = (pack) => (pack.type === "box" ? true : false);
     const isHero = (pack) => (pack.type === "hero" ? true : false);
@@ -148,6 +158,16 @@ export default function StarterPack() {
                                                                         }
                                                                     </div>
                                                                 </div>
+                                                                <div className="card-shop-row">
+                                                                    <div className="card-shop-label">
+                                                                        Class
+                                                                    </div>
+                                                                    <div className="card-shop-value">
+                                                                        {
+                                                                            pack.class
+                                                                        }
+                                                                    </div>
+                                                                </div>
                                                             </>
                                                         ) : (
                                                             ""
@@ -173,9 +193,16 @@ export default function StarterPack() {
                                                 <div className="card-shop-action">
                                                     <button
                                                         className="card-shop-button d-block button-connect"
-                                                        onClick={() => {
-                                                            console.log("BUY");
-                                                        }}
+                                                        onClick={() =>
+                                                            buyHero({
+                                                                user_id:
+                                                                    state.user_id,
+                                                                class_id:
+                                                                    pack.class_id,
+                                                                price: pack.price,
+                                                                name: pack.name,
+                                                            })
+                                                        }
                                                     >
                                                         Buy
                                                     </button>
@@ -197,46 +224,6 @@ export default function StarterPack() {
                         </Tab.Pane>
                     </Tab.Content>
                 </Tab.Container>
-
-                <Row className="d-none">
-                    {packData.map((pack, index) => (
-                        <Col
-                            key={index}
-                            sm={12}
-                            md={6}
-                            lg={4}
-                            className="mb-4 text-center"
-                        >
-                            <div className="card-egg card">
-                                <div className="card-header">
-                                    {getImagePack(pack)}
-                                </div>
-                                <div className="card-body">
-                                    <div className="dark fire">
-                                        <h3
-                                            className="Blazing"
-                                            contentEditable="true"
-                                            suppressContentEditableWarning={
-                                                true
-                                            }
-                                        >
-                                            {pack.name}
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div className="card-footer">
-                                    <button
-                                        type="button"
-                                        className="btn btn-new btn-primary btn-block btn-connect"
-                                        onClick={() => handleBuyHero(pack.hero)}
-                                    >
-                                        Buy
-                                    </button>
-                                </div>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
             </Container>
         </div>
     );

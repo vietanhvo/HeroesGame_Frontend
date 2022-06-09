@@ -45,7 +45,7 @@ const RouteGuard = ({ children }) => {
         }
     }
 
-    return authorized && children;
+    return <>{authorized && children}</>;
 };
 
 export default RouteGuard;

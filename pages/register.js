@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import { Button, Col, Row } from "react-bootstrap";
 import * as Yup from "yup";
 import { Formik, Form, FastField } from "formik";
 import InputField from "../components/custom-fields/InputField";
 import RadioField from "../components/custom-fields/RadioField";
-import axios from "../api/axios";
+
+import { Context as AuthContext } from "../context/AuthContext";
 
 const registerSchema = Yup.object().shape({
     first_name: Yup.string().required("First name is required"),
@@ -32,6 +33,7 @@ const registerSchema = Yup.object().shape({
 
 export default function Register() {
     const router = useRouter();
+    const { register } = useContext(AuthContext);
 
     const initialValues = {
         first_name: "",
@@ -54,10 +56,7 @@ export default function Register() {
                         <Formik
                             initialValues={initialValues}
                             validationSchema={registerSchema}
-                            onSubmit={async (values) => {
-                                let res = await axios.post("/api/register", values);
-                                console.log(res);
-                            }}
+                            onSubmit={(values) => register(values)}
                         >
                             {(formikProps) => {
                                 // const { values, errors, touched } = formikProps;

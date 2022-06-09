@@ -16,16 +16,19 @@ import "../styles/modal.css";
 import "../styles/auth.css";
 
 import { Provider as AuthProvider } from "../context/AuthContext";
+import { Provider as HeroProvider } from "../context/HeroContext";
 import RouteGuard from "../components/RouteGuard";
 
 const MyApp = ({ Component, pageProps }) => {
     return (
         <AuthProvider>
-            <RouteGuard>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
-            </RouteGuard>
+            <HeroProvider>
+                <RouteGuard>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </RouteGuard>
+            </HeroProvider>
         </AuthProvider>
     );
 };
