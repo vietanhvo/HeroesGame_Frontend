@@ -73,6 +73,21 @@ const login = (dispatch) => {
     };
 };
 
+const tryTokenLogin = (dispatch) => {
+    return async () => {
+        try {
+            const res = await axios.get("/api/token");
+            console.log(res.data);
+            dispatch({
+                type: "login",
+                payload: res.data,
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    };
+};
+
 const logout = (dispatch) => async () => {
     try {
         const res = await axios.get("/api/logout");
@@ -112,7 +127,7 @@ const register =
 
 export const { Provider, Context } = createDataContext(
     authReducer,
-    { login, logout, register, clearErrorMessage },
+    { login, tryTokenLogin, logout, register, clearErrorMessage },
     {
         errorMessage: "",
         auth: false,
