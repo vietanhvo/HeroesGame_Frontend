@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import { Button, Col, Row } from "react-bootstrap";
 import * as Yup from "yup";
 import { Formik, Form, FastField } from "formik";
 import InputField from "../components/custom-fields/InputField";
-import axios from "../api/axios";
+
+import { Context as AuthContext } from "../context/AuthContext";
 
 const loginSchema = Yup.object().shape({
     email: Yup.string()
@@ -22,6 +23,7 @@ export default function Login() {
         password: "",
         remember: false,
     };
+    const { login } = useContext(AuthContext);
 
     return (
         <div className="page-content page-home">
@@ -32,12 +34,8 @@ export default function Login() {
                         <Formik
                             initialValues={initialValues}
                             validationSchema={loginSchema}
-                            onSubmit={async (values) => {
-                                let res = await axios.post(
-                                    "/api/login",
-                                    values
-                                );
-                                console.log(res.status);
+                            onSubmit={(values) => {
+                                login(values);
                             }}
                         >
                             {(formikProps) => {

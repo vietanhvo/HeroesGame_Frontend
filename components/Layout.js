@@ -6,11 +6,11 @@ import AuthHeader from "./AuthHeader";
 import { Context as AuthContext } from "../context/AuthContext";
 
 export default function Layout({ children }) {
-    const { auth } = useContext(AuthContext);
+    const { state } = useContext(AuthContext);
 
     return (
         <>
-            {auth ? (
+            {state.auth ? (
                 <div className="main-app">
                     <Head>
                         <title>Heroes Game</title>

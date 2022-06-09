@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { Context as AuthContext } from "../context/AuthContext";
 
 export default function RouteGuard({ children }) {
-    const { auth } = useContext(AuthContext);
+    const { state } = useContext(AuthContext);
     const router = useRouter();
     const [authorized, setAuthorized] = useState(false);
 
@@ -23,18 +23,15 @@ export default function RouteGuard({ children }) {
             router.events.off("routeChangeStart", hideContent);
             router.events.off("routeChangeComplete", authCheck);
         };
-    }, []);
+    }, [state.auth]);
 
     function authCheck(url) {
         // redirect to login page if accessing a private page and not logged in
-        const publicPaths = ["/login"];
+        const publicPaths = ["/login", "/register"];
         const path = url.split("?")[0];
-        if (!auth && !publicPaths.includes(path)) {
+        if (!state.auth && !publicPaths.includes(path)) {
             setAuthorized(false);
-            router.push({
-                pathname: "/login",
-                query: { returnUrl: router.asPath },
-            });
+            router.push("/login");
         } else {
             setAuthorized(true);
         }

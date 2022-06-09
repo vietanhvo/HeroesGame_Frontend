@@ -1,5 +1,7 @@
 import createDataContext from "./createDataContext";
 import axios from "../api/axios";
+import Router from "next/router";
+import setLoading from "../utils/loading";
 
 const authReducer = (state, action) => {
     switch (action.type) {
@@ -41,9 +43,10 @@ const clearErrorMessage = (dispatch) => () => {
 const login = (dispatch) => {
     return async ({ email, password, remember }) => {
         // make api request to signup
+        setLoading(true);
         try {
             const res = await axios.post("/api/login", {
-                username,
+                email,
                 password,
                 remember,
             });
@@ -59,13 +62,14 @@ const login = (dispatch) => {
                     gold: res.data.gold,
                 },
             });
-            // navigate("Personal");
+            Router.push("/");
         } catch (err) {
             dispatch({
                 type: "add_err",
                 payload: "Something went wrong with log in",
             });
         }
+        setLoading(false);
     };
 };
 
@@ -96,6 +100,7 @@ const register =
                 password,
             });
             console.log(res.data);
+            Router.push("/login");
             // navigate("Signin");
         } catch (err) {
             dispatch({
