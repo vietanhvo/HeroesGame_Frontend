@@ -102,15 +102,18 @@ export default function FightMonster() {
     useEffect(() => {
         if (router.pathname.includes("/fight-monster")) {
             let mainapp = document.querySelector(".main-app");
-            mainapp.style.background =
-                'url("/assets/images/pages/fight-monster/bg1.png") top center no-repeat,url("/assets/images/pages/fight-monster/bg2.png") top center repeat';
-            mainapp.style.backgroundSize = "100%";
+            if (mainapp) {
+                mainapp.style.background =
+                    'url("/assets/images/pages/fight-monster/bg1.png") top center no-repeat,url("/assets/images/pages/fight-monster/bg2.png") top center repeat';
+                mainapp.style.backgroundSize = "100%";
+            }
         }
         return () => {
             let mainapp = document.querySelector(".main-app");
-            mainapp.style.background = "";
-
-            mainapp.style.backgroundSize = "100%";
+            if (mainapp) {
+                mainapp.style.background = "";
+                mainapp.style.backgroundSize = "100%";
+            }
         };
     }, [router.pathname]);
 

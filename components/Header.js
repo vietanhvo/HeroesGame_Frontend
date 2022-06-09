@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import React, { useContext, useState } from "react";
+import { Container, Button } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+import { Context as AuthContext } from "../context/AuthContext";
+
 export default function Header() {
     const router = useRouter();
+    const { logout } = useContext(AuthContext);
+
     const getMenuTitle = (pathname) => {
         let title = "";
         switch (pathname) {
@@ -39,6 +43,9 @@ export default function Header() {
         <>
             <Container>
                 <div className="menu-icon-content">
+                    <div className="header-btn">
+                        <Button onClick={logout}>Logout</Button>
+                    </div>
                     <ul className="menu-icon">
                         <li className="menu-icon-item">
                             <Link href="/mybag">

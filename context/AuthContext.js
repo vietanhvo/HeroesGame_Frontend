@@ -89,6 +89,7 @@ const tryTokenLogin = (dispatch) => {
 };
 
 const logout = (dispatch) => async () => {
+    setLoading(true);
     try {
         const res = await axios.get("/api/logout");
         console.log(res.data);
@@ -99,7 +100,7 @@ const logout = (dispatch) => async () => {
             payload: "Something went wrong with log out",
         });
     }
-    // navigate("loginFlow");
+    setLoading(false);
 };
 
 const register =
@@ -116,7 +117,6 @@ const register =
             });
             console.log(res.data);
             Router.push("/login");
-            // navigate("Signin");
         } catch (err) {
             dispatch({
                 type: "add_err",
