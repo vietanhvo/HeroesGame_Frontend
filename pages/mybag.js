@@ -1,14 +1,24 @@
-import React, { useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import List from "../components/MyBag/List";
 import { Container, Nav, Tab } from "react-bootstrap";
 
 import { Context as AuthContext } from "../context/AuthContext";
 import { Context as HeroContext } from "../context/HeroContext";
 
 export default function MyBag() {
-    const { state } = useContext(AuthContext);
-    const { loadHeroes } = useContext(HeroContext);
-    useEffect(() => {
-        loadHeroes(state.user_id);
+    const user_id = useContext(AuthContext).state.user_id;
+    const { state, loadHeroes } = useContext(HeroContext);
+    const [itemsData, setItemsData] = useState([]);
+    const [heroesData, setHeroesData] = useState([]);
+    const [heroData, setHeroData] = useState(0);
+
+    const changeHeroData = (arg) => {
+        setHeroData(arg);
+    };
+
+    useEffect(async () => {
+        await loadHeroes(user_id);
+        setHeroesData(state);
     }, []);
 
     return (
@@ -37,8 +47,21 @@ export default function MyBag() {
                     </div>
 
                     <Tab.Content>
-                        <Tab.Pane eventKey="heroes"></Tab.Pane>
-                        <Tab.Pane eventKey="items"></Tab.Pane>
+                        <Tab.Pane eventKey="heroes">
+                            <List
+                                data={state}
+                                itemsData={itemsData}
+                                changeHeroData={changeHeroData}
+                                types={1}
+                            ></List>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="items">
+                            <List
+                                data={itemsData}
+                                changeHeroData={changeHeroData}
+                                types={2}
+                            ></List>
+                        </Tab.Pane>
                     </Tab.Content>
                 </Tab.Container>
             </Container>
