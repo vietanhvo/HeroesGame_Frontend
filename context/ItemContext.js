@@ -3,31 +3,30 @@ import axios from "../api/axios";
 import setLoading from "../utils/loading";
 import Swal from "sweetalert2";
 
-const heroReducer = (state, action) => {
+const itemReducer = (state, action) => {
     switch (action.type) {
-        case "load_heroes":
+        case "load_items":
             return [...action.payload];
-        case "add_hero":
+        case "add_item":
             return [...state, action.payload];
         default:
             return state;
     }
 };
 
-const buyHero = (dispatch) => {
-    return async ({ user_id, class_id, name, price }) => {
+const buyItem = (dispatch) => {
+    return async ({ user_id, item_id, quantity }) => {
         // make api request to signup
         setLoading(true);
         try {
-            const res = await axios.post("/hero/buy", {
+            const res = await axios.post("/item/buy", {
                 user_id,
-                class_id,
-                name,
-                price,
+                item_id,
+                quantity,
             });
             console.log(res.data);
             dispatch({
-                type: "add_hero",
+                type: "add_item",
                 payload: res.data,
             });
             // Router.push("/");
@@ -35,31 +34,37 @@ const buyHero = (dispatch) => {
 
             Swal.fire({
                 title: "Done!",
-                html: '<span style="color: white; font-size: 24px">Bought Hero Successfully!</span>',
+                html: '<span style="color: white; font-size: 24px">Bought Item Successfully!</span>',
                 icon: "success",
                 confirmButtonText: "Close",
             });
         } catch (err) {
             setLoading(false);
-            Swal.fire("Bought Hero NOT Successfully!", "", "error");
+            Swal.fire("Bought Item NOT Successfully!", "", "error");
             console.log(err);
         }
     };
 };
 
-const loadHeroes = (dispatch) => {
-    return async ({ user_id }) => {
+const loadItems = (dispatch) => {
+    return async (user_id) => {
+        setLoading(true);
         try {
-            const res = await axios.post("hero/load", { user_id });
+            const res = await axios.post("item/load", { user_id });
             console.log(res.data);
+            dispatch({
+                type: "load_items",
+                payload: res.data,
+            });
         } catch (err) {
             console.log(err);
         }
+        setLoading(false);
     };
 };
 
 export const { Provider, Context } = createDataContext(
-    heroReducer,
-    { buyHero, loadHeroes },
+    itemReducer,
+    { buyItem, loadItems },
     []
 );

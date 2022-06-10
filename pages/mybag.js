@@ -4,10 +4,13 @@ import { Container, Nav, Tab } from "react-bootstrap";
 
 import { Context as AuthContext } from "../context/AuthContext";
 import { Context as HeroContext } from "../context/HeroContext";
+import { Context as ItemContext } from "../context/ItemContext";
 
 export default function MyBag() {
     const user_id = useContext(AuthContext).state.user_id;
     const { state, loadHeroes } = useContext(HeroContext);
+    const itemState = useContext(ItemContext).state;
+    const { loadItems } = useContext(ItemContext);
     const [itemsData, setItemsData] = useState([]);
     const [heroesData, setHeroesData] = useState([]);
     const [heroData, setHeroData] = useState(0);
@@ -18,7 +21,10 @@ export default function MyBag() {
 
     useEffect(async () => {
         await loadHeroes(user_id);
+        await loadItems(user_id);
+
         setHeroesData(state);
+        setItemsData(itemState);
     }, []);
 
     return (
