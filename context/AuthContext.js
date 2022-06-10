@@ -33,6 +33,8 @@ const authReducer = (state, action) => {
                 gender: "",
                 gold: "",
             };
+        case "get_gold":
+            return { ...state, gold: action.payload };
         default:
             return state;
     }
@@ -130,9 +132,19 @@ const register =
         setLoading(false);
     };
 
+const getGold = (dispatch) => async () => {
+    try {
+        const res = await axios.get("/auth/gold");
+        console.log(res.data);
+        dispatch({ type: "get_gold", payload: res.data });
+    } catch (err) {
+        console.log(err);
+    }
+};
+
 export const { Provider, Context } = createDataContext(
     authReducer,
-    { login, tryTokenLogin, logout, register, clearErrorMessage },
+    { login, tryTokenLogin, logout, register, clearErrorMessage, getGold },
     {
         errorMessage: "",
         auth: false,

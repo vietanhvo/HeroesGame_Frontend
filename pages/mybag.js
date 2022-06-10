@@ -29,6 +29,10 @@ export default function MyBag() {
         setItemsData(itemState);
     }, [itemState]);
 
+    useEffect(async () => {
+        setHeroesData(heroesData);
+    }, [heroesData]);
+
     return (
         <div className="page-content page-starter-pack">
             <Container>

@@ -47,7 +47,7 @@ export default function StarterPack() {
     const defaultKeyParam = router.query.defaultKey;
     const defaultKey = defaultKeyParam ? defaultKeyParam : "heroes";
 
-    const { state } = useContext(AuthContext);
+    const { state, getGold } = useContext(AuthContext);
     const { buyHero } = useContext(HeroContext);
     const { buyItem } = useContext(ItemContext);
 
@@ -184,16 +184,17 @@ export default function StarterPack() {
                                                 <div className="card-shop-action">
                                                     <button
                                                         className="card-shop-button d-block button-connect"
-                                                        onClick={() =>
-                                                            buyHero({
+                                                        onClick={async () => {
+                                                            await buyHero({
                                                                 user_id:
                                                                     state.user_id,
                                                                 class_id:
                                                                     pack.class_id,
                                                                 price: pack.price,
                                                                 name: pack.name,
-                                                            })
-                                                        }
+                                                            });
+                                                            await getGold();
+                                                        }}
                                                     >
                                                         Buy
                                                     </button>
@@ -212,6 +213,7 @@ export default function StarterPack() {
                                             key={index}
                                             item={item}
                                             buyItem={buyItem}
+                                            getGold={getGold}
                                             user_id={state.user_id}
                                         />
                                     );
@@ -225,7 +227,7 @@ export default function StarterPack() {
     );
 }
 
-const ItemDetail = ({ item, buyItem, user_id }) => {
+const ItemDetail = ({ item, buyItem, getGold, user_id }) => {
     const [amountItem, setAmountItem] = useState(item.defaultAmount);
     const handleChangeAmountItem = (e, type) => {
         let value = e.target.value;
@@ -297,13 +299,14 @@ const ItemDetail = ({ item, buyItem, user_id }) => {
                     <div className="card-shop-action">
                         <button
                             className="card-shop-button d-block button-connect"
-                            onClick={() =>
-                                buyItem({
+                            onClick={async () => {
+                                await buyItem({
                                     item_id: item.item_id,
                                     user_id: user_id,
                                     quantity: amountItem,
-                                })
-                            }
+                                });
+                                await getGold();
+                            }}
                         >
                             Buy
                         </button>
