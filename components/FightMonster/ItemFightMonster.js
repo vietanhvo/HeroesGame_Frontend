@@ -1,8 +1,57 @@
 import Image from "next/image";
-import React from "react";
-import { Col } from "react-bootstrap";
+import React, { useState, useRef } from "react";
+import { Col, Modal } from "react-bootstrap";
+import { EXP_THRESHOLD } from "../../utils/HeroData";
+import Swal from "sweetalert2";
 
 export default function ItemFightMonster({ data, heroData, reloadHero }) {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => {
+        setShow(false);
+    };
+
+    const handleBattle = () => {
+        handleBattleResult();
+        setShow(true);
+    };
+
+    const handleBattleResult = () => {
+        // const battleContract = new web3.eth.Contract(
+        //     BATTLE_ABI,
+        //     BATTLE_CONTRACT
+        // );
+        // loadBattle(battleContract);
+        loadBattle();
+    };
+
+    const loadBattle = () => {
+        try {
+            // battleContract.once(
+            //     "BattleResult",
+            //     {
+            //         filter: { heroId: heroData.id },
+            //         fromBlock: "lastest",
+            //     },
+            //     (error, event) => {
+            //         if (event) {
+            //             heroData.exp =
+            //                 parseInt(heroData.exp) +
+            //                 parseInt(event.returnValues.expReward);
+            //             heroData.lastBattleTime = parseInt(Date.now() / 1000);
+            //             heroData.exp > EXP_THRESHOLD[heroData.level - 1]
+            //                 ? (heroData.level += 1)
+            //                 : null;
+            //             reloadHero();
+            //         }
+            //     }
+            // );
+        } catch (err) {
+            // console.log(err);
+            Swal.fire("Battle error!", "", "error");
+        } finally {
+        }
+    };
     return (
         <Col sm={12} md={6} lg={6} xl={3} className="text-center">
             <div className="card-monster card">
@@ -52,13 +101,36 @@ export default function ItemFightMonster({ data, heroData, reloadHero }) {
                     <div className="mt-3">
                         <button
                             className="btn btn-warning btn-block"
-                            onClick={() => {}}
+                            onClick={handleBattle}
                         >
                             Fight
                         </button>
                     </div>
                 </div>
             </div>
+            <Modal
+                show={show}
+                size="lg"
+                className="modal-fighting"
+                backdrop="static"
+                keyboard={false}
+                centered
+                onHide={handleClose}
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>BATTLE</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            className="embed-responsive-item"
+                            src={`/gameplay/index.html?h=${heroData.types}&m=${data.level}&heroid=${heroData.id}&s=${heroData.rare}&l=${heroData.level}`}
+                        ></iframe>
+                    </div>
+                </Modal.Body>
+            </Modal>
         </Col>
     );
 }

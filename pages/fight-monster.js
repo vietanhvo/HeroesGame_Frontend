@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useContext, useCallback } from "react";
 import { Col, Container, Row, ProgressBar } from "react-bootstrap";
 import ListFightMonster from "../components/FightMonster/ListFightMonster";
-import { RARE_MAX, EXP_THREESHOLD } from "../utils/HeroData";
+import { RARE_MAX, EXP_THRESHOLD } from "../utils/HeroData";
+
+import { Context as HeroContext } from "../context/HeroContext";
 
 const monsterFight = [
     {
@@ -37,28 +39,30 @@ const monsterFight = [
 ];
 
 export default function FightMonster() {
+    const { state, loadHeroes } = useContext(HeroContext);
+
     const router = useRouter();
     const [heroesData, setHeroesData] = useState([]);
     const [heroData, setHeroData] = useState({
         id: 0,
-        types: 99,
+        class_id: 99,
         name: "",
-        rare: 0,
+        stars: 0,
         level: 0,
-        exp: 0,
+        experience: 0,
         lastBattleTime: 0,
         remainTime: 0,
     });
-    const [remainTime, setRemainTime] = useState(0);
-    const [endTime, setEndTime] = useState(0);
     const [selectHeroIndex, setSelectHeroIndex] = useState(0);
     const [monsters, setMonsters] = useState(monsterFight.slice(0, 4));
-    const [fightBtn, setFightBtn] = useState(false);
     const [reloadPage, setReloadPage] = useState(0);
-    const firstRun = useRef(true);
 
-    const handleSelectRare = (types, rare) => {
-        return `/assets/img/dapp/heros/${types}/R${rare}.gif`;
+    const reloadHero = () => {
+        setReloadPage(Math.floor(Math.random() * 101));
+    };
+
+    const handleSelectRare = (class_id, stars) => {
+        return `/assets/img/dapp/heros/${class_id - 1}/R${stars}.gif`;
     };
     const createStarImage = (onOff, index) => (
         <Image
@@ -70,12 +74,13 @@ export default function FightMonster() {
             alt="Star"
         />
     );
-    const showStars = (rare) => {
+
+    const showStars = (starsData) => {
         let stars = [];
-        for (var i = 0; i < rare; i++) {
+        for (var i = 0; i < starsData; i++) {
             stars.push(1);
         }
-        for (var i = rare; i < 6; i++) {
+        for (var i = starsData; i < 6; i++) {
             stars.push(2);
         }
         return stars.map(createStarImage);
@@ -98,6 +103,43 @@ export default function FightMonster() {
             setSelectHeroIndex(0);
         }
     };
+
+    const loadHeroesData = useCallback(async () => {
+        try {
+            await loadHeroes();
+            setHeroesData(state);
+            if (state.length > 0) {
+                setHeroData(state[0]);
+                setSelectHeroIndex(0);
+            }
+        } catch (err) {
+            // console.log(err);
+        } finally {
+        }
+    }, []);
+
+    useEffect(() => {
+        const data = heroesData[selectHeroIndex];
+        if (data) {
+            setHeroData(data);
+        } else {
+            const temp = {
+                id: 0,
+                types: 99,
+                name: "",
+                rare: 0,
+                level: 0,
+                exp: 0,
+                lastBattleTime: 0,
+                remainTime: 0,
+            };
+            setHeroData(temp);
+        }
+    }, [reloadPage, selectHeroIndex]);
+
+    useEffect(() => {
+        loadHeroesData();
+    }, []);
 
     useEffect(() => {
         if (router.pathname.includes("/fight-monster")) {
@@ -126,7 +168,7 @@ export default function FightMonster() {
                             <div className="hero-skills">
                                 <img
                                     className="main-skill"
-                                    src={`/assets/images/pages/fight-monster/type${heroData.types}.png`}
+                                    src={`/assets/images/pages/fight-monster/type${heroData.class_id}.png`}
                                 />
                                 <img
                                     className="skills"
@@ -148,10 +190,10 @@ export default function FightMonster() {
                                     <div className="card-shop-anim">
                                         <div className="card-shop-img hero-img">
                                             <Image
-                                                id={`hero-${heroData.id}`}
+                                                id={`hero-${heroData.hero_id}`}
                                                 src={handleSelectRare(
-                                                    heroData.types,
-                                                    heroData.rare
+                                                    heroData.class_id,
+                                                    heroData.stars
                                                 )}
                                                 width={200}
                                                 height={200}
@@ -195,7 +237,7 @@ export default function FightMonster() {
                                     <div className="card-shop-infor">
                                         <div className="card-shop-prices">
                                             <div className="card-shop-row">
-                                                {showStars(heroData.rare)}
+                                                {showStars(heroData.stars)}
                                             </div>
                                             <div className="card-shop-row">
                                                 <div className="card-shop-label">
@@ -210,11 +252,11 @@ export default function FightMonster() {
                                                     Experience
                                                 </div>
                                                 <div className="card-shop-value">
-                                                    {heroData.exp}
+                                                    {heroData.experience}
                                                     {heroData.level &&
                                                     heroData.level < RARE_MAX
                                                         ? ` / ${
-                                                              EXP_THREESHOLD[
+                                                              EXP_THRESHOLD[
                                                                   heroData.level -
                                                                       1
                                                               ]
@@ -230,8 +272,8 @@ export default function FightMonster() {
                                                         ? [
                                                               heroData.level <
                                                               RARE_MAX
-                                                                  ? (heroData.exp /
-                                                                        EXP_THREESHOLD[
+                                                                  ? (heroData.experience /
+                                                                        EXP_THRESHOLD[
                                                                             heroData.level -
                                                                                 1
                                                                         ]) *
@@ -252,7 +294,7 @@ export default function FightMonster() {
                     <ListFightMonster
                         data={monsters}
                         heroData={heroData}
-                        remainTime={remainTime}
+                        reloadHero={reloadHero}
                     ></ListFightMonster>
                 </div>
             </Container>
