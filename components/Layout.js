@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Head from "next/head";
 import Header from "./Header";
-import AuthHeader from "./AuthHeader";
 
 import { Context as AuthContext } from "../context/AuthContext";
 
@@ -20,7 +19,7 @@ export default function Layout({ children }) {
                 </div>
             ) : (
                 <div className="auth-container">
-                    <AuthHeader />
+                    <Header />
                     {children}
                 </div>
             )}

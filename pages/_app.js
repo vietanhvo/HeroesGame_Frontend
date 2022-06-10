@@ -17,18 +17,21 @@ import "../styles/auth.css";
 
 import { Provider as AuthProvider } from "../context/AuthContext";
 import { Provider as HeroProvider } from "../context/HeroContext";
+import { Provider as ItemProvider } from "../context/ItemContext";
 import RouteGuard from "../components/RouteGuard";
 
 const MyApp = ({ Component, pageProps }) => {
     return (
         <AuthProvider>
-            <HeroProvider>
-                <RouteGuard>
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
-                </RouteGuard>
-            </HeroProvider>
+            <ItemProvider>
+                <HeroProvider>
+                    <RouteGuard>
+                        <Layout>
+                            <Component {...pageProps} />
+                        </Layout>
+                    </RouteGuard>
+                </HeroProvider>
+            </ItemProvider>
         </AuthProvider>
     );
 };

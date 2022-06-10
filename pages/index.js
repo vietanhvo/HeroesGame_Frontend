@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Row, Col, Tab, Nav, Form } from "react-bootstrap";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { Context as AuthContext } from "../context/AuthContext";
 import { Context as HeroContext } from "../context/HeroContext";
+import { Context as ItemContext } from "../context/ItemContext";
 
 const packData = [
     {
@@ -32,6 +33,7 @@ const packData = [
 const packItemData = [
     {
         name: "Gem",
+        item_id: 1,
         defaultAmount: 100,
         price: "10",
         image: "/assets/images/pages/store/gem_gif.gif",
@@ -40,25 +42,14 @@ const packItemData = [
     },
 ];
 
-const getImagePack = (pack) => {
-    return (
-        <Image
-            src={pack.image}
-            alt={pack.name}
-            className="gem-img"
-            width={150}
-            height={150}
-        />
-    );
-};
-
 export default function StarterPack() {
     const router = useRouter();
     const defaultKeyParam = router.query.defaultKey;
     const defaultKey = defaultKeyParam ? defaultKeyParam : "heroes";
 
-    const { state } = useContext(AuthContext);
+    const { state, getGold } = useContext(AuthContext);
     const { buyHero } = useContext(HeroContext);
+    const { buyItem } = useContext(ItemContext);
 
     const isBox = (pack) => (pack.type === "box" ? true : false);
     const isHero = (pack) => (pack.type === "hero" ? true : false);
@@ -193,16 +184,17 @@ export default function StarterPack() {
                                                 <div className="card-shop-action">
                                                     <button
                                                         className="card-shop-button d-block button-connect"
-                                                        onClick={() =>
-                                                            buyHero({
+                                                        onClick={async () => {
+                                                            await buyHero({
                                                                 user_id:
                                                                     state.user_id,
                                                                 class_id:
                                                                     pack.class_id,
                                                                 price: pack.price,
                                                                 name: pack.name,
-                                                            })
-                                                        }
+                                                            });
+                                                            await getGold();
+                                                        }}
                                                     >
                                                         Buy
                                                     </button>
@@ -217,7 +209,13 @@ export default function StarterPack() {
                             <Row className="justify-content-center">
                                 {packItemData.map((item, index) => {
                                     return (
-                                        <ItemDetail key={index} item={item} />
+                                        <ItemDetail
+                                            key={index}
+                                            item={item}
+                                            buyItem={buyItem}
+                                            getGold={getGold}
+                                            user_id={state.user_id}
+                                        />
                                     );
                                 })}
                             </Row>
@@ -229,11 +227,11 @@ export default function StarterPack() {
     );
 }
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, buyItem, getGold, user_id }) => {
     const [amountItem, setAmountItem] = useState(item.defaultAmount);
     const handleChangeAmountItem = (e, type) => {
         let value = e.target.value;
-        setAmountItem(value);
+        setAmountItem(parseInt(value));
     };
 
     return (
@@ -285,7 +283,7 @@ const ItemDetail = ({ item }) => {
                                     <Form.Control
                                         size="sm"
                                         type="number"
-                                        step={item.name === "Gem" ? "100" : "1"}
+                                        step={item.name === "Gem" ? 100 : 1}
                                         value={amountItem}
                                         onChange={(value) =>
                                             handleChangeAmountItem(
@@ -301,7 +299,14 @@ const ItemDetail = ({ item }) => {
                     <div className="card-shop-action">
                         <button
                             className="card-shop-button d-block button-connect"
-                            onClick={() => handleBuy(item.name, amountItem)}
+                            onClick={async () => {
+                                await buyItem({
+                                    item_id: item.item_id,
+                                    user_id: user_id,
+                                    quantity: amountItem,
+                                });
+                                await getGold();
+                            }}
                         >
                             Buy
                         </button>
