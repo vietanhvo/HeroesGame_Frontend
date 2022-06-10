@@ -64,8 +64,29 @@ const loadHeroes = (dispatch) => {
     };
 };
 
+const upgradeHero = (dispatch) => {
+    return async ({ user_id, hero_id, hero_stars }) => {
+        setLoading(true);
+        try {
+            const res = await axios.post("hero/upgrade", {
+                user_id,
+                hero_id,
+            });
+            if (res.data > hero_stars) {
+                Swal.fire("Upgrade Successful!", "", "success");
+            } else {
+                Swal.fire("Upgrade NOT Successful!", "", "error");
+            }
+        } catch (err) {
+            console.log(err);
+            Swal.fire("Error in upgrade!", "", "error");
+        }
+        setLoading(false);
+    };
+};
+
 export const { Provider, Context } = createDataContext(
     heroReducer,
-    { buyHero, loadHeroes },
+    { buyHero, loadHeroes, upgradeHero },
     []
 );

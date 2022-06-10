@@ -1,32 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import { Col } from "react-bootstrap";
-import { useRouter } from "next/router";
 
-export default function Item({ data, changeHeroData }) {
-    const router = useRouter();
-    const createStarImage = (onOff, index) => (
-        <Image
-            key={`star-${index}`}
-            id={`star-${index}`}
-            src={`/assets/images/stones/star${onOff}.png`}
-            width={32}
-            height={32}
-            alt="Star"
-        />
-    );
-    const showStars = (rare) => {
-        let stars = [];
-        for (var i = 0; i < rare; i++) {
-            stars.push(1);
-        }
-        for (var i = rare; i < 6; i++) {
-            stars.push(2);
-        }
-        return stars.map(createStarImage);
-    };
-
+export default function Item({ data }) {
     return (
         <>
             <Col key={data.item_id} md={6} lg={3}>

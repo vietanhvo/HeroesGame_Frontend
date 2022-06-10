@@ -22,10 +22,12 @@ export default function MyBag() {
     useEffect(async () => {
         await loadHeroes(user_id);
         await loadItems(user_id);
-
         setHeroesData(state);
-        setItemsData(itemState);
     }, []);
+
+    useEffect(async () => {
+        setItemsData(itemState);
+    }, [itemState]);
 
     return (
         <div className="page-content page-starter-pack">

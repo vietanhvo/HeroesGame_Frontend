@@ -35,7 +35,7 @@ const packItemData = [
         name: "Gem",
         item_id: 1,
         defaultAmount: 100,
-        price: "100",
+        price: "10",
         image: "/assets/images/pages/store/gem_gif.gif",
         type: "box",
         hero: 2,
