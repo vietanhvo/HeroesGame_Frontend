@@ -47,10 +47,10 @@ const buyItem = (dispatch) => {
 };
 
 const loadItems = (dispatch) => {
-    return async (user_id) => {
+    return async () => {
         setLoading(true);
         try {
-            const res = await axios.post("item/load", { user_id });
+            const res = await axios.get("item/load");
             console.log(res.data);
             dispatch({
                 type: "load_items",

@@ -2,27 +2,19 @@ import React, { useState, useEffect, useContext } from "react";
 import List from "../components/MyBag/List";
 import { Container, Nav, Tab } from "react-bootstrap";
 
-import { Context as AuthContext } from "../context/AuthContext";
 import { Context as HeroContext } from "../context/HeroContext";
 import { Context as ItemContext } from "../context/ItemContext";
 
 export default function MyBag() {
-    const user_id = useContext(AuthContext).state.user_id;
     const { state, loadHeroes } = useContext(HeroContext);
     const itemState = useContext(ItemContext).state;
     const { loadItems } = useContext(ItemContext);
     const [itemsData, setItemsData] = useState([]);
     const [heroesData, setHeroesData] = useState([]);
-    const [heroData, setHeroData] = useState(0);
-
-    const changeHeroData = (arg) => {
-        setHeroData(arg);
-    };
 
     useEffect(async () => {
-        await loadHeroes(user_id);
-        await loadItems(user_id);
-        setHeroesData(state);
+        await loadHeroes();
+        await loadItems();
     }, []);
 
     useEffect(async () => {
@@ -63,16 +55,11 @@ export default function MyBag() {
                             <List
                                 data={state}
                                 itemsData={itemsData}
-                                changeHeroData={changeHeroData}
                                 types={1}
                             ></List>
                         </Tab.Pane>
                         <Tab.Pane eventKey="items">
-                            <List
-                                data={itemsData}
-                                changeHeroData={changeHeroData}
-                                types={2}
-                            ></List>
+                            <List data={itemsData} types={2}></List>
                         </Tab.Pane>
                     </Tab.Content>
                 </Tab.Container>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Col, ProgressBar } from "react-bootstrap";
 import Swal from "sweetalert2";
 import Modal from "../../components/Modal/Modal";
@@ -16,14 +16,14 @@ import { Context as ItemContext } from "../../context/ItemContext";
 import { Context as AuthContext } from "../../context/AuthContext";
 import { Context as HeroContext } from "../../context/HeroContext";
 
-export default function Hero({ data, changeHeroData }) {
+export default function Hero({ data }) {
     const gemNeeded = data.stars * RARE_RATIO;
 
     const [showUpgrade, setShowUpgrade] = useState(false);
     const [amountGem, setAmountGem] = useState(0);
 
     const { state, loadItems } = useContext(ItemContext);
-    const { upgradeHero } = useContext(HeroContext);
+    const { upgradeHero, loadHeroes } = useContext(HeroContext);
     const user_id = useContext(AuthContext).state.user_id;
 
     const handleSelectRare = (types, rare) => {
@@ -66,21 +66,19 @@ export default function Hero({ data, changeHeroData }) {
             hero_id: data.hero_id,
             hero_stars: data.stars,
         });
+        await loadItems();
+        await loadHeroes();
     };
 
     const handleUpgrade = async () => {
-        setLoading(true);
-        try {
-            // Get GEM
-            await loadItems(user_id);
-            setAmountGem(state[0].quantity);
-        } catch (err) {
-            // console.log(err);
-        } finally {
-            setLoading(false);
-            setShowUpgrade(true);
-        }
+        setShowUpgrade(true);
     };
+
+    useEffect(() => {
+        if (state[0]) {
+            setAmountGem(state[0].quantity);
+        }
+    }, [state[0]]);
 
     return (
         <>

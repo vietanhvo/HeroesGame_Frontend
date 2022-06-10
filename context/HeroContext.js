@@ -48,10 +48,10 @@ const buyHero = (dispatch) => {
 };
 
 const loadHeroes = (dispatch) => {
-    return async (user_id) => {
+    return async () => {
         setLoading(true);
         try {
-            const res = await axios.post("hero/load", { user_id });
+            const res = await axios.get("hero/load");
             console.log(res.data);
             dispatch({
                 type: "load_heroes",
