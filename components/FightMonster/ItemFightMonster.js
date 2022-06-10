@@ -126,7 +126,7 @@ export default function ItemFightMonster({ data, heroData, reloadHero }) {
                             width="100%"
                             height="100%"
                             className="embed-responsive-item"
-                            src={`/gameplay/index.html?h=${heroData.types}&m=${data.level}&heroid=${heroData.id}&s=${heroData.rare}&l=${heroData.level}`}
+                            src={`/gameplay/index.html?h=${heroData.class_id - 1}&m=${data.level}&heroid=${heroData.hero_id}&s=${heroData.stars}&l=${heroData.level}`}
                         ></iframe>
                     </div>
                 </Modal.Body>

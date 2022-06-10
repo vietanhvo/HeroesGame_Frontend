@@ -104,20 +104,6 @@ export default function FightMonster() {
         }
     };
 
-    const loadHeroesData = useCallback(async () => {
-        try {
-            await loadHeroes();
-            setHeroesData(state);
-            if (state.length > 0) {
-                setHeroData(state[0]);
-                setSelectHeroIndex(0);
-            }
-        } catch (err) {
-            // console.log(err);
-        } finally {
-        }
-    }, []);
-
     useEffect(() => {
         const data = heroesData[selectHeroIndex];
         if (data) {
@@ -137,9 +123,22 @@ export default function FightMonster() {
         }
     }, [reloadPage, selectHeroIndex]);
 
-    useEffect(() => {
-        loadHeroesData();
+    useEffect(async () => {
+        try {
+            await loadHeroes();
+        } catch (err) {
+            // console.log(err);
+        } finally {
+        }
     }, []);
+
+    useEffect(() => {
+        setHeroesData(state);
+        if (state.length > 0) {
+            setHeroData(state[0]);
+            setSelectHeroIndex(0);
+        }
+    }, [state]);
 
     useEffect(() => {
         if (router.pathname.includes("/fight-monster")) {
