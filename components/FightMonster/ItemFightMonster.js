@@ -1,13 +1,20 @@
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, { useState, useContext } from "react";
 import { Col, Modal } from "react-bootstrap";
-import { EXP_THRESHOLD } from "../../utils/HeroData";
 import Swal from "sweetalert2";
 
+import { Context as HeroContext } from "../../context/HeroContext";
+import { Context as AuthContext } from "../../context/AuthContext";
+
 export default function ItemFightMonster({ data, heroData, reloadHero }) {
+    const { loadHeroes } = useContext(HeroContext);
+    const { getGold } = useContext(AuthContext);
+
     const [show, setShow] = useState(false);
 
-    const handleClose = () => {
+    const handleClose = async () => {
+        await loadHeroes();
+        await getGold();
         setShow(false);
     };
 
@@ -17,37 +24,12 @@ export default function ItemFightMonster({ data, heroData, reloadHero }) {
     };
 
     const handleBattleResult = () => {
-        // const battleContract = new web3.eth.Contract(
-        //     BATTLE_ABI,
-        //     BATTLE_CONTRACT
-        // );
-        // loadBattle(battleContract);
         loadBattle();
     };
 
     const loadBattle = () => {
         try {
-            // battleContract.once(
-            //     "BattleResult",
-            //     {
-            //         filter: { heroId: heroData.id },
-            //         fromBlock: "lastest",
-            //     },
-            //     (error, event) => {
-            //         if (event) {
-            //             heroData.exp =
-            //                 parseInt(heroData.exp) +
-            //                 parseInt(event.returnValues.expReward);
-            //             heroData.lastBattleTime = parseInt(Date.now() / 1000);
-            //             heroData.exp > EXP_THRESHOLD[heroData.level - 1]
-            //                 ? (heroData.level += 1)
-            //                 : null;
-            //             reloadHero();
-            //         }
-            //     }
-            // );
         } catch (err) {
-            // console.log(err);
             Swal.fire("Battle error!", "", "error");
         } finally {
         }
@@ -126,7 +108,11 @@ export default function ItemFightMonster({ data, heroData, reloadHero }) {
                             width="100%"
                             height="100%"
                             className="embed-responsive-item"
-                            src={`/gameplay/index.html?h=${heroData.class_id - 1}&m=${data.level}&heroid=${heroData.hero_id}&s=${heroData.stars}&l=${heroData.level}`}
+                            src={`/gameplay/index.html?h=${
+                                heroData.class_id - 1
+                            }&m=${data.level}&heroid=${heroData.hero_id}&s=${
+                                heroData.stars
+                            }&l=${heroData.level}`}
                         ></iframe>
                     </div>
                 </Modal.Body>
