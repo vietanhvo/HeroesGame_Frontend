@@ -2,6 +2,7 @@ import createDataContext from "./createDataContext";
 import axios from "../api/axios";
 import Router from "next/router";
 import setLoading from "../utils/loading";
+import Swal from "sweetalert2";
 
 const authReducer = (state, action) => {
     switch (action.type) {
@@ -68,13 +69,21 @@ const login = (dispatch) => {
                 },
             });
             Router.push("/");
+            setLoading(false);
+            Swal.fire({
+                title: "Welcome!",
+                html: '<span style="color: white; font-size: 24px">Login Successfully!</span>',
+                icon: "success",
+                confirmButtonText: "Close",
+            });
         } catch (err) {
+            setLoading(false);
+            Swal.fire("Login failed!", "", "error");
             dispatch({
                 type: "add_err",
                 payload: "Something went wrong with log in",
             });
         }
-        setLoading(false);
     };
 };
 
@@ -123,13 +132,21 @@ const register =
             });
             console.log(res.data);
             Router.push("/login");
+            setLoading(false);
+            Swal.fire({
+                title: "Congratulation!",
+                html: '<span style="color: white; font-size: 24px">Register Successfully!</span>',
+                icon: "success",
+                confirmButtonText: "Close",
+            });
         } catch (err) {
+            setLoading(false);
+            Swal.fire("Register failed!", "", "error");
             dispatch({
                 type: "add_err",
                 payload: "Something went wrong with register account",
             });
         }
-        setLoading(false);
     };
 
 const getGold = (dispatch) => async () => {
