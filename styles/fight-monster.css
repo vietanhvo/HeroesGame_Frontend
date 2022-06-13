@@ -1,0 +1,253 @@
+.page-fight-monster {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+#choose-monster {
+    margin-top: 75px;
+    margin-bottom: 25px;
+}
+.custom-switch {
+    padding-left: 2.25rem;
+}
+.custom-switch .custom-control-label:before {
+    left: -2.25rem;
+    width: 1.75rem;
+    pointer-events: all;
+    border-radius: 0.5rem;
+}
+.custom-switch .custom-control-label:after {
+    top: calc(0.25rem + 2px);
+    left: calc(-2.25rem + 2px);
+    width: calc(1rem - 4px);
+    height: calc(1rem - 4px);
+    background-color: #adb5bd;
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-transform 0.15s ease-in-out;
+    -webkit-transition: background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-transform 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-transform 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .custom-switch .custom-control-label:after {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+.custom-switch .custom-control-input:checked ~ .custom-control-label:after {
+    background-color: #fff;
+    -webkit-transform: translateX(0.75rem);
+    transform: translateX(0.75rem);
+}
+.custom-switch
+    .custom-control-input:disabled:checked
+    ~ .custom-control-label:before {
+    background-color: rgba(0, 123, 255, 0.5);
+}
+
+.zoon-custom-switch
+    .custom-control-input:checked
+    ~ .custom-control-label:before {
+    border-color: #59a1ed;
+    background-color: #59a1ed;
+}
+.card-monster {
+    background-color: transparent;
+    border: none;
+    width: 320px;
+    margin: auto;
+}
+.card-monster__img {
+    min-height: 370px;
+    z-index: 0;
+    background-image: url("/assets/images/pages/fight-monster/place-monster.gif");
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.card-monster__img img {
+    width: 100%;
+}
+.card-monster .card-header {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: -75px;
+    z-index: 2;
+}
+.card-monster .card-body {
+    background: #12102c;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#12102c),
+        to(#2e2958)
+    );
+    background: -webkit-linear-gradient(top, #12102c, #2e2958);
+    background: linear-gradient(180deg, #12102c, #2e2958);
+    color: #fff;
+    border: 8px solid #7f86ff;
+    border-radius: 1.5rem;
+    padding: 20px;
+    -webkit-box-shadow: 0 20px 10px 0 rgba(18, 16, 44, 0.5);
+    box-shadow: 0 20px 10px 0 rgba(18, 16, 44, 0.5);
+    z-index: 2;
+}
+.card-monster .card-body .monster-statis {
+    width: 100%;
+    text-align: left;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+.card-monster .card-body .monster-statis__title {
+    color: #fff;
+    font-size: 1rem;
+}
+.card-monster .card-body .monster-statis__value {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.moster-statis-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-flame {
+    width: 100%;
+    background-image: url("/assets/images/pages/fight-monster/flame.png");
+    background-position: 0 -1000px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: flame 3s linear infinite;
+    animation: flame 3s linear infinite;
+}
+@-webkit-keyframes flame {
+    0% {
+        background-position: 0 -50%;
+    }
+    to {
+        background-position: 0 -25%;
+    }
+}
+@keyframes flame {
+    0% {
+        background-position: 0 -50%;
+    }
+    to {
+        background-position: 0 -25%;
+    }
+}
+.modal-fight-history .modal-content {
+    background-color: #ede7c7;
+    border-radius: 20px;
+    border: 5px solid #59a1ed;
+    color: #501f00;
+}
+.modal-fight-history .modal-header .close {
+    color: #501f00;
+    opacity: 0.9;
+    text-shadow: none;
+}
+.modal-fight-history .modal-header .close span {
+    font-size: 24px;
+    color: #501f00;
+}
+.modal-fight-history .modal-header {
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.modal-fight-history .modal-header .modal-title {
+    margin-bottom: 0;
+}
+
+.fight-history-table table {
+    text-align: right;
+}
+.fight-history-table table tr th {
+    border: none;
+    font-weight: 700;
+}
+.fight-history-table table tr td {
+    border-color: hsla(0, 0%, 100%, 0.25);
+}
+.fight-history-table table tr td .nft {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+.fight-history-table table tr td .nft-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: inline-flex;
+    -webkit-object-fit: contain;
+    object-fit: contain;
+}
+.fight-history-table table tr td .nft-name {
+    display: inline-flex;
+}
+
+.header-card {
+    position: relative;
+}
+
+.index-number {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.monster-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.exp-bar {
+    margin-bottom: 14px;
+    height: 14px;
+}
+
+.page-fight-monster .card-shop .card-shop-meta .exp-bar {
+    margin-bottom: 10px;
+    height: 10px;
+}
+
+.last-item {
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .monster-list {
+        transform: translateX(-15px);
+    }
+}

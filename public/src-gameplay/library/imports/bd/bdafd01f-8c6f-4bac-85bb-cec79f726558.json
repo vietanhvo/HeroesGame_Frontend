@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "iconHero",
+    "texture": "b0ac2ac2-699e-4385-8575-445603e6939d",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      267,
+      106
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      269,
+      108
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

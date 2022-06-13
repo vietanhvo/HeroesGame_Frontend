@@ -1,0 +1,128 @@
+{
+  "__type__": "sp.SkeletonData",
+  "_name": "export_char",
+  "_objFlags": 0,
+  "_native": "",
+  "_skeletonJson": {
+    "skeleton": {
+      "hash": "5YhPXeU2ZkhfJv1rgn+KySkNxN8",
+      "spine": "3.8.99",
+      "images": "",
+      "audio": "E:/Art_Hai/GameNFT/Spine/Enemy/E1"
+    },
+    "bones": [
+      {
+        "name": "root"
+      },
+      {
+        "name": "bone4",
+        "parent": "root"
+      }
+    ],
+    "slots": [
+      {
+        "name": "ef/explo_1",
+        "bone": "bone4"
+      }
+    ],
+    "skins": [
+      {
+        "name": "default",
+        "attachments": {
+          "ef/explo_1": {
+            "ef/explo_1": {
+              "x": -1.27,
+              "y": 11.97,
+              "width": 272,
+              "height": 243
+            },
+            "ef/explo_2": {
+              "x": -1.27,
+              "y": 11.97,
+              "width": 272,
+              "height": 243
+            },
+            "ef/explo_3": {
+              "x": -1.27,
+              "y": 11.97,
+              "width": 272,
+              "height": 243
+            },
+            "ef/explo_4": {
+              "x": -1.27,
+              "y": 11.97,
+              "width": 272,
+              "height": 243
+            },
+            "ef/explo_5": {
+              "x": -1.27,
+              "y": 11.97,
+              "width": 272,
+              "height": 243
+            }
+          }
+        }
+      }
+    ],
+    "animations": {
+      "atk_demo": {
+        "slots": {
+          "ef/explo_1": {
+            "attachment": [
+              {
+                "name": "ef/explo_1"
+              },
+              {
+                "time": 0.0333,
+                "name": "ef/explo_2"
+              },
+              {
+                "time": 0.0667,
+                "name": "ef/explo_3"
+              },
+              {
+                "time": 0.1,
+                "name": "ef/explo_4"
+              },
+              {
+                "time": 0.1333,
+                "name": "ef/explo_5"
+              },
+              {
+                "time": 0.1667,
+                "name": null
+              }
+            ]
+          }
+        },
+        "bones": {
+          "root": {
+            "rotate": [
+              {
+                "angle": 0.03
+              }
+            ]
+          },
+          "bone4": {
+            "scale": [
+              {
+                "x": 1.17,
+                "y": 1.17
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "_atlasText": "\r\nexport_char.png\r\nsize: 563,445\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nef/explo_1\r\n  rotate: true\r\n  xy: 2, 297\r\n  size: 146, 147\r\n  orig: 272, 243\r\n  offset: 65, 41\r\n  index: -1\r\nef/explo_2\r\n  rotate: true\r\n  xy: 359, 245\r\n  size: 198, 202\r\n  orig: 272, 243\r\n  offset: 32, 21\r\n  index: -1\r\nef/explo_3\r\n  rotate: true\r\n  xy: 151, 247\r\n  size: 196, 206\r\n  orig: 272, 243\r\n  offset: 37, 15\r\n  index: -1\r\nef/explo_4\r\n  rotate: false\r\n  xy: 217, 2\r\n  size: 260, 241\r\n  orig: 272, 243\r\n  offset: 3, 1\r\n  index: -1\r\nef/explo_5\r\n  rotate: false\r\n  xy: 2, 32\r\n  size: 213, 213\r\n  orig: 272, 243\r\n  offset: 35, 14\r\n  index: -1\r\n",
+  "textures": [
+    {
+      "__uuid__": "7db156d5-831d-4ed5-9fdf-01d6aa29e6ff"
+    }
+  ],
+  "textureNames": [
+    "export_char.png"
+  ],
+  "scale": 1
+}

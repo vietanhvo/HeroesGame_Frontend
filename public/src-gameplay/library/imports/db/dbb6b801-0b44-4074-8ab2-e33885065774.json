@@ -1,0 +1,368 @@
+{
+  "__type__": "sp.SkeletonData",
+  "_name": "export_char",
+  "_objFlags": 0,
+  "_native": "",
+  "_skeletonJson": {
+    "skeleton": {
+      "hash": "t7Eo8KkhmozhoQrQtCCy/9wOd1Q",
+      "spine": "3.8.99",
+      "x": -1524.67,
+      "y": -391.14,
+      "width": 3069.61,
+      "height": 1726.66,
+      "images": "",
+      "audio": "E:/Art_Hai/GameNFT/Spine/Enemy/E2"
+    },
+    "bones": [
+      {
+        "name": "root"
+      },
+      {
+        "name": "bone2",
+        "parent": "root",
+        "length": 113.77,
+        "rotation": -2.49,
+        "x": 632.94,
+        "y": 0.98
+      },
+      {
+        "name": "bone3",
+        "parent": "root",
+        "length": 84.75,
+        "x": 571.6,
+        "y": 0.11
+      },
+      {
+        "name": "bg2",
+        "parent": "root",
+        "length": 154.88,
+        "rotation": 93.5,
+        "x": 41.93,
+        "y": -382.44,
+        "scaleX": 1.5988,
+        "scaleY": 1.5988
+      },
+      {
+        "name": "bone5",
+        "parent": "root"
+      }
+    ],
+    "slots": [
+      {
+        "name": "bg2",
+        "bone": "bg2"
+      },
+      {
+        "name": "ef/fire_enemy2_1",
+        "bone": "bone2",
+        "blend": "additive"
+      },
+      {
+        "name": "ef/light",
+        "bone": "bone3",
+        "blend": "additive"
+      },
+      {
+        "name": "ef/expo_bom_1",
+        "bone": "bone5"
+      },
+      {
+        "name": "ef/expo_bom_2",
+        "bone": "bone5",
+        "blend": "additive"
+      }
+    ],
+    "skins": [
+      {
+        "name": "default",
+        "attachments": {
+          "ef/expo_bom_1": {
+            "ef/expo_bom_1": {
+              "width": 178,
+              "height": 178
+            },
+            "ef/expo_bom_2": {
+              "x": -2.3,
+              "y": -2.57,
+              "width": 296,
+              "height": 297
+            },
+            "ef/expo_bom_3": {
+              "x": -0.27,
+              "y": -1.8,
+              "width": 369,
+              "height": 369
+            },
+            "ef/expo_bom_4": {
+              "x": -0.27,
+              "y": -2.57,
+              "width": 391,
+              "height": 391
+            },
+            "ef/expo_bom_5": {
+              "x": -2.57,
+              "y": -33.25,
+              "width": 391,
+              "height": 451
+            },
+            "ef/expo_bom_6": {
+              "x": 3.57,
+              "y": -3.83,
+              "width": 373,
+              "height": 380
+            },
+            "ef/expo_bom_7": {
+              "x": 2.39,
+              "y": -6.31,
+              "width": 338,
+              "height": 357
+            },
+            "ef/expo_bom_8": {
+              "x": 6.25,
+              "y": -5.75,
+              "width": 243,
+              "height": 262
+            }
+          },
+          "ef/expo_bom_2": {
+            "ef/expo_bom_1": {
+              "width": 178,
+              "height": 178
+            },
+            "ef/expo_bom_2": {
+              "x": -2.3,
+              "y": -2.57,
+              "width": 296,
+              "height": 297
+            },
+            "ef/expo_bom_3": {
+              "x": -0.27,
+              "y": -1.8,
+              "width": 369,
+              "height": 369
+            },
+            "ef/expo_bom_4": {
+              "x": -0.27,
+              "y": -2.57,
+              "width": 391,
+              "height": 391
+            },
+            "ef/expo_bom_5": {
+              "x": -2.57,
+              "y": -33.25,
+              "width": 391,
+              "height": 451
+            },
+            "ef/expo_bom_6": {
+              "x": 3.57,
+              "y": -3.83,
+              "width": 373,
+              "height": 380
+            },
+            "ef/expo_bom_7": {
+              "x": 2.39,
+              "y": -6.31,
+              "width": 338,
+              "height": 357
+            },
+            "ef/expo_bom_8": {
+              "x": 6.25,
+              "y": -5.75,
+              "width": 243,
+              "height": 262
+            }
+          },
+          "ef/fire_enemy2_1": {
+            "ef/fire_enemy2_1": {
+              "x": 15.31,
+              "y": 1.17,
+              "rotation": 2.49,
+              "width": 55,
+              "height": 83
+            },
+            "ef/fire_enemy2_2": {
+              "x": 15.31,
+              "y": 1.17,
+              "rotation": 2.49,
+              "width": 64,
+              "height": 147
+            },
+            "ef/fire_enemy2_3": {
+              "x": 15.31,
+              "y": 1.17,
+              "rotation": 2.49,
+              "width": 76,
+              "height": 191
+            },
+            "ef/fire_enemy2_4": {
+              "x": 15.31,
+              "y": 1.17,
+              "rotation": 2.49,
+              "width": 79,
+              "height": 196
+            },
+            "ef/fire_enemy2_5": {
+              "x": 15.31,
+              "y": 1.17,
+              "rotation": 2.49,
+              "width": 79,
+              "height": 203
+            },
+            "ef/fire_enemy2_6": {
+              "x": 15.31,
+              "y": 1.17,
+              "rotation": 2.49,
+              "width": 79,
+              "height": 206
+            },
+            "ef/fire_enemy2_7": {
+              "x": 15.31,
+              "y": 1.17,
+              "rotation": 2.49,
+              "width": 77,
+              "height": 208
+            }
+          },
+          "ef/light": {
+            "ef/light": {
+              "x": 32.32,
+              "y": 0.5,
+              "width": 364,
+              "height": 311
+            }
+          }
+        }
+      }
+    ],
+    "animations": {
+      "atk_demo": {
+        "slots": {
+          "ef/expo_bom_1": {
+            "color": [
+              {
+                "time": 0.1333,
+                "color": "ffffffb2"
+              },
+              {
+                "time": 0.1667,
+                "color": "ffffff00",
+                "curve": "stepped"
+              },
+              {
+                "time": 0.2,
+                "color": "ffffff00"
+              },
+              {
+                "time": 0.2333,
+                "color": "ffffff1a"
+              }
+            ],
+            "attachment": [
+              {
+                "name": "ef/expo_bom_1"
+              },
+              {
+                "time": 0.0333,
+                "name": "ef/expo_bom_2"
+              },
+              {
+                "time": 0.0667,
+                "name": "ef/expo_bom_3"
+              },
+              {
+                "time": 0.1,
+                "name": "ef/expo_bom_4"
+              },
+              {
+                "time": 0.1333,
+                "name": "ef/expo_bom_5"
+              },
+              {
+                "time": 0.1667,
+                "name": "ef/expo_bom_6"
+              },
+              {
+                "time": 0.2,
+                "name": "ef/expo_bom_7"
+              },
+              {
+                "time": 0.2333,
+                "name": "ef/expo_bom_8"
+              },
+              {
+                "time": 0.2667,
+                "name": null
+              }
+            ]
+          },
+          "ef/expo_bom_2": {
+            "color": [
+              {
+                "time": 0.2,
+                "color": "ffffff59"
+              }
+            ],
+            "attachment": [
+              {
+                "name": "ef/expo_bom_1"
+              },
+              {
+                "time": 0.0333,
+                "name": "ef/expo_bom_2"
+              },
+              {
+                "time": 0.0667,
+                "name": "ef/expo_bom_3"
+              },
+              {
+                "time": 0.1,
+                "name": "ef/expo_bom_4"
+              },
+              {
+                "time": 0.1333,
+                "name": "ef/expo_bom_5"
+              },
+              {
+                "time": 0.1667,
+                "name": "ef/expo_bom_6"
+              },
+              {
+                "time": 0.2,
+                "name": "ef/expo_bom_7"
+              },
+              {
+                "time": 0.2333,
+                "name": "ef/expo_bom_8"
+              },
+              {
+                "time": 0.2667,
+                "name": null
+              }
+            ]
+          }
+        },
+        "bones": {
+          "bone5": {
+            "scale": [
+              {
+                "x": 1.846,
+                "y": 1.846
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "_atlasText": "\r\nexport_char.png\r\nsize: 996,868\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nef/expo_bom_1\r\n  rotate: false\r\n  xy: 523, 93\r\n  size: 149, 155\r\n  orig: 178, 178\r\n  offset: 16, 11\r\n  index: -1\r\nef/expo_bom_2\r\n  rotate: true\r\n  xy: 2, 2\r\n  size: 248, 257\r\n  orig: 296, 297\r\n  offset: 27, 20\r\n  index: -1\r\nef/expo_bom_3\r\n  rotate: false\r\n  xy: 678, 541\r\n  size: 313, 322\r\n  orig: 369, 369\r\n  offset: 33, 24\r\n  index: -1\r\nef/expo_bom_4\r\n  rotate: true\r\n  xy: 2, 519\r\n  size: 344, 355\r\n  orig: 391, 391\r\n  offset: 27, 16\r\n  index: -1\r\nef/expo_bom_5\r\n  rotate: false\r\n  xy: 359, 519\r\n  size: 317, 344\r\n  orig: 391, 451\r\n  offset: 41, 76\r\n  index: -1\r\nef/expo_bom_6\r\n  rotate: false\r\n  xy: 678, 238\r\n  size: 294, 301\r\n  orig: 373, 380\r\n  offset: 38, 42\r\n  index: -1\r\nef/expo_bom_7\r\n  rotate: false\r\n  xy: 308, 250\r\n  size: 264, 267\r\n  orig: 338, 357\r\n  offset: 37, 50\r\n  index: -1\r\nef/expo_bom_8\r\n  rotate: true\r\n  xy: 261, 8\r\n  size: 240, 260\r\n  orig: 243, 262\r\n  offset: 3, 1\r\n  index: -1\r\nef/fire_enemy2_1\r\n  rotate: true\r\n  xy: 574, 282\r\n  size: 46, 72\r\n  orig: 55, 83\r\n  offset: 4, 6\r\n  index: -1\r\nef/fire_enemy2_2\r\n  rotate: false\r\n  xy: 939, 99\r\n  size: 54, 137\r\n  orig: 64, 147\r\n  offset: 5, 5\r\n  index: -1\r\nef/fire_enemy2_3\r\n  rotate: true\r\n  xy: 674, 32\r\n  size: 66, 182\r\n  orig: 76, 191\r\n  offset: 5, 5\r\n  index: -1\r\nef/fire_enemy2_4\r\n  rotate: false\r\n  xy: 574, 330\r\n  size: 68, 187\r\n  orig: 79, 196\r\n  offset: 5, 5\r\n  index: -1\r\nef/fire_enemy2_5\r\n  rotate: true\r\n  xy: 674, 100\r\n  size: 67, 192\r\n  orig: 79, 203\r\n  offset: 6, 5\r\n  index: -1\r\nef/fire_enemy2_6\r\n  rotate: true\r\n  xy: 674, 169\r\n  size: 67, 196\r\n  orig: 79, 206\r\n  offset: 6, 5\r\n  index: -1\r\nef/fire_enemy2_7\r\n  rotate: false\r\n  xy: 872, 41\r\n  size: 65, 195\r\n  orig: 77, 208\r\n  offset: 6, 6\r\n  index: -1\r\nef/light\r\n  rotate: false\r\n  xy: 2, 252\r\n  size: 304, 265\r\n  orig: 364, 311\r\n  offset: 26, 25\r\n  index: -1\r\n",
+  "textures": [
+    {
+      "__uuid__": "fd5cc481-7c16-4a5d-b2e7-81116247ed93"
+    }
+  ],
+  "textureNames": [
+    "export_char.png"
+  ],
+  "scale": 1
+}

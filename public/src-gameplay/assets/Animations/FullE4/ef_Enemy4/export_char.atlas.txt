@@ -1,0 +1,68 @@
+
+export_char.png
+size: 764,788
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/chem1
+  rotate: false
+  xy: 2, 395
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1
+ef/chem2
+  rotate: false
+  xy: 2, 2
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1
+ef/chem3
+  rotate: false
+  xy: 382, 395
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1
+ef/chem4
+  rotate: false
+  xy: 382, 2
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1
+
+export_char2.png
+size: 764,788
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/chem5
+  rotate: false
+  xy: 2, 395
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1
+ef/chem6
+  rotate: false
+  xy: 2, 2
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1
+ef/chem7
+  rotate: false
+  xy: 382, 395
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1
+ef/chem8
+  rotate: false
+  xy: 382, 2
+  size: 378, 391
+  orig: 378, 391
+  offset: 0, 0
+  index: -1

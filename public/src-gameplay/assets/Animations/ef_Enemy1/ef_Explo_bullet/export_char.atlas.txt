@@ -1,0 +1,41 @@
+
+export_char.png
+size: 563,445
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/explo_1
+  rotate: true
+  xy: 2, 297
+  size: 146, 147
+  orig: 272, 243
+  offset: 65, 41
+  index: -1
+ef/explo_2
+  rotate: true
+  xy: 359, 245
+  size: 198, 202
+  orig: 272, 243
+  offset: 32, 21
+  index: -1
+ef/explo_3
+  rotate: true
+  xy: 151, 247
+  size: 196, 206
+  orig: 272, 243
+  offset: 37, 15
+  index: -1
+ef/explo_4
+  rotate: false
+  xy: 217, 2
+  size: 260, 241
+  orig: 272, 243
+  offset: 3, 1
+  index: -1
+ef/explo_5
+  rotate: false
+  xy: 2, 32
+  size: 213, 213
+  orig: 272, 243
+  offset: 35, 14
+  index: -1

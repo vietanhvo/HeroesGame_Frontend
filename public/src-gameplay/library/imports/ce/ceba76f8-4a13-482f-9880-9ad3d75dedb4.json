@@ -1,0 +1,176 @@
+{
+  "__type__": "sp.SkeletonData",
+  "_name": "bg1",
+  "_objFlags": 0,
+  "_native": "",
+  "_skeletonJson": {
+    "skeleton": {
+      "hash": "oAxwiGCHkjfIGzdoj6gEuTeoLxU",
+      "spine": "3.8.99",
+      "x": -961.05,
+      "y": -446.18,
+      "width": 1920,
+      "height": 1080,
+      "images": "E:/Art_Hai/GameNFT/Spine/Fight",
+      "audio": "E:\\Art_Hai\\GameNFT\\Spine\\Fight"
+    },
+    "bones": [
+      {
+        "name": "root"
+      },
+      {
+        "name": "Layer 77",
+        "parent": "root",
+        "length": 212.28,
+        "rotation": 90.8,
+        "x": -2.44,
+        "y": -442.26
+      },
+      {
+        "name": "fight",
+        "parent": "root",
+        "length": 97.28,
+        "rotation": -1.68,
+        "x": 7.27,
+        "y": 98.07
+      }
+    ],
+    "slots": [
+      {
+        "name": "Layer 77",
+        "bone": "Layer 77"
+      },
+      {
+        "name": "fight",
+        "bone": "fight"
+      }
+    ],
+    "skins": [
+      {
+        "name": "default",
+        "attachments": {
+          "fight": {
+            "fight": {
+              "x": 27.35,
+              "y": -22.46,
+              "rotation": 1.68,
+              "width": 920,
+              "height": 292
+            }
+          }
+        }
+      }
+    ],
+    "animations": {
+      "animation": {
+        "slots": {
+          "fight": {
+            "color": [
+              {
+                "color": "ffffff00"
+              },
+              {
+                "time": 0.2333,
+                "color": "ffffffff",
+                "curve": "stepped"
+              },
+              {
+                "time": 1.3333,
+                "color": "ffffffff"
+              },
+              {
+                "time": 1.4667,
+                "color": "ffffff00"
+              }
+            ],
+            "attachment": [
+              {
+                "name": "fight"
+              }
+            ]
+          }
+        },
+        "bones": {
+          "fight": {
+            "translate": [
+              {
+                "time": 1,
+                "curve": 0.237,
+                "c2": 0.54,
+                "c3": 0.75
+              },
+              {
+                "time": 1.3333,
+                "x": -125.42,
+                "curve": 0.212,
+                "c2": 0.64,
+                "c3": 0.75
+              },
+              {
+                "time": 1.4667,
+                "x": 229.14
+              }
+            ],
+            "scale": [
+              {
+                "x": 2.638,
+                "y": 2.638
+              },
+              {
+                "time": 0.2333,
+                "x": 0.904,
+                "y": 0.904
+              },
+              {
+                "time": 0.3333,
+                "x": 0.788,
+                "y": 0.788
+              },
+              {
+                "time": 0.4333,
+                "x": 1.081,
+                "y": 1.081
+              },
+              {
+                "time": 0.5333,
+                "x": 0.932,
+                "y": 0.932
+              },
+              {
+                "time": 0.6333,
+                "curve": "stepped"
+              },
+              {
+                "time": 1,
+                "curve": 0.215,
+                "c2": 0.52,
+                "c3": 0.75
+              },
+              {
+                "time": 1.3333,
+                "x": 0.642,
+                "curve": 0.212,
+                "c2": 0.64,
+                "c3": 0.75
+              },
+              {
+                "time": 1.4667,
+                "x": 1.413
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "_atlasText": "\r\nbg1.png\r\nsize: 922,294\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nfight\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 918, 290\r\n  orig: 920, 292\r\n  offset: 1, 1\r\n  index: -1\r\n",
+  "textures": [
+    {
+      "__uuid__": "f2c9c20b-e52d-4ae2-a92e-5a8ccfde743c"
+    }
+  ],
+  "textureNames": [
+    "bg1.png"
+  ],
+  "scale": 1
+}

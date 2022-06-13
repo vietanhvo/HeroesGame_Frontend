@@ -1,0 +1,13 @@
+
+export_char.png
+size: 160,160
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/ball_lighting_boss2
+  rotate: false
+  xy: 2, 2
+  size: 154, 154
+  orig: 158, 158
+  offset: 2, 2
+  index: -1

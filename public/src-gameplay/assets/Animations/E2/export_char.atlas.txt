@@ -1,0 +1,97 @@
+
+export_char.png
+size: 932,380
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/fire_enemy2_1
+  rotate: true
+  xy: 855, 21
+  size: 46, 72
+  orig: 55, 83
+  offset: 4, 6
+  index: -1
+ef/fire_enemy2_2
+  rotate: false
+  xy: 601, 239
+  size: 54, 137
+  orig: 64, 147
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_3
+  rotate: false
+  xy: 533, 194
+  size: 66, 182
+  orig: 76, 191
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_4
+  rotate: false
+  xy: 860, 189
+  size: 68, 187
+  orig: 79, 196
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_5
+  rotate: true
+  xy: 464, 3
+  size: 67, 192
+  orig: 79, 203
+  offset: 6, 5
+  index: -1
+ef/fire_enemy2_6
+  rotate: true
+  xy: 266, 3
+  size: 67, 196
+  orig: 79, 206
+  offset: 6, 5
+  index: -1
+ef/fire_enemy2_7
+  rotate: true
+  xy: 658, 2
+  size: 65, 195
+  orig: 77, 208
+  offset: 6, 6
+  index: -1
+ef/light
+  rotate: true
+  xy: 266, 72
+  size: 304, 265
+  orig: 364, 311
+  offset: 26, 25
+  index: -1
+hamduoi
+  rotate: true
+  xy: 658, 69
+  size: 307, 200
+  orig: 307, 200
+  offset: 0, 0
+  index: -1
+hamtren
+  rotate: true
+  xy: 2, 8
+  size: 368, 262
+  orig: 368, 262
+  offset: 0, 0
+  index: -1
+mimat
+  rotate: true
+  xy: 601, 197
+  size: 40, 53
+  orig: 42, 55
+  offset: 1, 1
+  index: -1
+tay1
+  rotate: false
+  xy: 860, 111
+  size: 64, 76
+  orig: 64, 76
+  offset: 0, 0
+  index: -1
+tay2
+  rotate: false
+  xy: 860, 69
+  size: 61, 40
+  orig: 61, 41
+  offset: 0, 1
+  index: -1

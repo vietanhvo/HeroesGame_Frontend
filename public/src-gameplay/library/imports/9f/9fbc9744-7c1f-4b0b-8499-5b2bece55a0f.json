@@ -1,0 +1,7 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "bg1.atlas",
+  "_objFlags": 0,
+  "_native": "",
+  "text": "\r\nbg1.png\r\nsize: 922,294\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nfight\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 918, 290\r\n  orig: 920, 292\r\n  offset: 1, 1\r\n  index: -1\r\n"
+}

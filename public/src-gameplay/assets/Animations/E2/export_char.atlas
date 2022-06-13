@@ -1,0 +1,166 @@
+
+export_char.png
+size: 1012,836
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/ball_lighting_boss2
+  rotate: false
+  xy: 546, 609
+  size: 154, 154
+  orig: 158, 158
+  offset: 2, 2
+  index: -1
+ef/expo_bom_1
+  rotate: true
+  xy: 389, 615
+  size: 149, 155
+  orig: 178, 178
+  offset: 16, 11
+  index: -1
+ef/expo_bom_2
+  rotate: true
+  xy: 264, 365
+  size: 248, 257
+  orig: 296, 297
+  offset: 27, 20
+  index: -1
+ef/expo_bom_6
+  rotate: true
+  xy: 577, 2
+  size: 294, 301
+  orig: 373, 380
+  offset: 38, 42
+  index: -1
+ef/expo_bom_7
+  rotate: true
+  xy: 2, 99
+  size: 264, 267
+  orig: 338, 357
+  offset: 37, 50
+  index: -1
+ef/expo_bom_8
+  rotate: true
+  xy: 2, 456
+  size: 240, 260
+  orig: 243, 262
+  offset: 3, 1
+  index: -1
+ef/fire_enemy2_1
+  rotate: true
+  xy: 120, 785
+  size: 46, 72
+  orig: 55, 83
+  offset: 4, 6
+  index: -1
+ef/fire_enemy2_2
+  rotate: true
+  xy: 194, 777
+  size: 54, 137
+  orig: 64, 147
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_3
+  rotate: true
+  xy: 608, 765
+  size: 66, 182
+  orig: 76, 191
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_4
+  rotate: true
+  xy: 2, 715
+  size: 68, 187
+  orig: 79, 196
+  offset: 5, 5
+  index: -1
+ef/fire_enemy2_5
+  rotate: true
+  xy: 792, 764
+  size: 67, 192
+  orig: 79, 203
+  offset: 6, 5
+  index: -1
+ef/fire_enemy2_6
+  rotate: true
+  xy: 191, 698
+  size: 67, 196
+  orig: 79, 206
+  offset: 6, 5
+  index: -1
+ef/fire_enemy2_7
+  rotate: true
+  xy: 411, 766
+  size: 65, 195
+  orig: 77, 208
+  offset: 6, 6
+  index: -1
+ef/light
+  rotate: false
+  xy: 271, 31
+  size: 304, 265
+  orig: 364, 311
+  offset: 26, 25
+  index: -1
+hamduoi
+  rotate: false
+  xy: 702, 562
+  size: 307, 200
+  orig: 307, 200
+  offset: 0, 0
+  index: -1
+hamtren
+  rotate: false
+  xy: 523, 298
+  size: 368, 262
+  orig: 368, 262
+  offset: 0, 0
+  index: -1
+mimat
+  rotate: true
+  xy: 2, 791
+  size: 40, 53
+  orig: 42, 55
+  offset: 1, 1
+  index: -1
+tay1
+  rotate: true
+  xy: 333, 767
+  size: 64, 76
+  orig: 64, 76
+  offset: 0, 0
+  index: -1
+tay2
+  rotate: false
+  xy: 57, 791
+  size: 61, 40
+  orig: 61, 41
+  offset: 0, 1
+  index: -1
+
+export_char2.png
+size: 996,348
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/expo_bom_3
+  rotate: false
+  xy: 678, 24
+  size: 313, 322
+  orig: 369, 369
+  offset: 33, 24
+  index: -1
+ef/expo_bom_4
+  rotate: true
+  xy: 2, 2
+  size: 344, 355
+  orig: 391, 391
+  offset: 27, 16
+  index: -1
+ef/expo_bom_5
+  rotate: false
+  xy: 359, 2
+  size: 317, 344
+  orig: 391, 451
+  offset: 41, 76
+  index: -1

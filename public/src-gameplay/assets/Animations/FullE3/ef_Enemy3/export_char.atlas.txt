@@ -1,0 +1,110 @@
+
+export_char.png
+size: 932,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/dungnham
+  rotate: false
+  xy: 483, 91
+  size: 278, 88
+  orig: 278, 88
+  offset: 0, 0
+  index: -1
+ef/flame1
+  rotate: false
+  xy: 296, 35
+  size: 185, 146
+  orig: 185, 146
+  offset: 0, 0
+  index: -1
+ef/flame10
+  rotate: true
+  xy: 317, 412
+  size: 285, 303
+  orig: 285, 303
+  offset: 0, 0
+  index: -1
+ef/flame11
+  rotate: true
+  xy: 644, 181
+  size: 204, 281
+  orig: 204, 281
+  offset: 0, 0
+  index: -1
+ef/flame13
+  rotate: false
+  xy: 763, 61
+  size: 165, 118
+  orig: 165, 118
+  offset: 0, 0
+  index: -1
+ef/flame2
+  rotate: true
+  xy: 2, 2
+  size: 185, 292
+  orig: 185, 292
+  offset: 0, 0
+  index: -1
+ef/flame3
+  rotate: true
+  xy: 327, 183
+  size: 202, 315
+  orig: 202, 315
+  offset: 0, 0
+  index: -1
+ef/flame4
+  rotate: true
+  xy: 2, 189
+  size: 221, 323
+  orig: 221, 323
+  offset: 0, 0
+  index: -1
+ef/flame5
+  rotate: false
+  xy: 622, 387
+  size: 260, 316
+  orig: 260, 316
+  offset: 0, 0
+  index: -1
+ef/flame6
+  rotate: true
+  xy: 2, 419
+  size: 278, 313
+  orig: 278, 313
+  offset: 0, 0
+  index: -1
+ef/flame7
+  rotate: false
+  xy: 295, 699
+  size: 287, 315
+  orig: 287, 315
+  offset: 0, 0
+  index: -1
+ef/flame8
+  rotate: false
+  xy: 584, 705
+  size: 291, 309
+  orig: 291, 309
+  offset: 0, 0
+  index: -1
+ef/flame9
+  rotate: false
+  xy: 2, 701
+  size: 291, 313
+  orig: 291, 313
+  offset: 0, 0
+  index: -1
+
+export_char2.png
+size: 204,276
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ef/flame12
+  rotate: false
+  xy: 2, 2
+  size: 200, 270
+  orig: 200, 270
+  offset: 0, 0
+  index: -1

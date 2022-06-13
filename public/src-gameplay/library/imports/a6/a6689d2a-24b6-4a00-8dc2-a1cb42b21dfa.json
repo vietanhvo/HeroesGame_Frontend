@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "HP_off",
+    "texture": "a6f16f1e-8f76-4a2f-8aad-32d210b8eb52",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      477,
+      43
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      479,
+      45
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

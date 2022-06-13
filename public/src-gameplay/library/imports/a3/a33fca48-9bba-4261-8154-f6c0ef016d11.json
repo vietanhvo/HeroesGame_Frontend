@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "thanhexp2",
+    "texture": "021faafa-b529-4609-870c-05a4113ac7f7",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      385,
+      26
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      387,
+      28
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

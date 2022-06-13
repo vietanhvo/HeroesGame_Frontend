@@ -1,0 +1,171 @@
+.auth-container {
+    background-image: url("/assets/images/pages/auth/backgroundfull.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+@media (max-width: 576px) {
+    .auth-container {
+        background-image: url("/assets/images/pages/auth/bg-mobile.png");
+    }
+}
+
+.page-content {
+    min-height: 70vh;
+}
+
+.header {
+    padding: 10px 0;
+}
+
+.form-title {
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: #abb2b9;
+    font-size: 24px;
+    text-align: center;
+    transform: translateY(-15px);
+}
+
+.form-container {
+    background-image: url("/assets/images/pages/auth/frame-infor.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* padding: 0px 23px; */
+    position: relative;
+    top: -70px;
+    color: white;
+    margin-top: 100px;
+}
+
+.form-body {
+    padding-top: 40px;
+}
+
+.input-field {
+    background-color: white;
+    margin-bottom: 20px;
+    text-transform: none;
+    padding: 8px;
+}
+
+.remember-me {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.remember-checkbox {
+    width: 20px;
+    height: 15px;
+}
+
+.remember-label {
+    margin: 10px;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+#main-btn {
+    margin-top: 10px;
+    width: 60%;
+}
+
+#navigate-btn {
+    width: 25%;
+}
+
+.first-name-container {
+    width: 55%;
+    float: left;
+}
+
+.surname-container {
+    width: 42%;
+    float: right;
+}
+
+.name-field {
+    text-transform: capitalize;
+}
+
+.date-of-birth-container {
+    width: 35%;
+    float: left;
+}
+
+.gender-container {
+    width: 60%;
+    float: right;
+    padding: 12px 0 12px 0;
+}
+
+.gender-input-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.gender-radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: white;
+    width: 110px;
+    border-radius: 10px;
+    padding: 15px 10px 15px 10px;
+    margin-left: 20px;
+}
+
+.gender-radio-checked {
+    background-color: #1dfaf7;
+}
+
+.radio-style {
+    width: 16px;
+    height: 16px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.agree-terms-label {
+    margin-bottom: 20px;
+}
+
+.agree-terms-input {
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transform: translateY(2px);
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    transform: translateY(-14px);
+}
+
+.gender-error-msg {
+    color: red;
+    font-size: 14px;
+}

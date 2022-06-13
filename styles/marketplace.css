@@ -1,0 +1,578 @@
+.market-search {
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(/assets/images/pages/marketplace/frame.png) top center
+        no-repeat;
+    background-size: 100% 100%;
+    position: sticky;
+    top: 50px;
+}
+.market-search__form {
+    margin-top: 25px;
+}
+.market-search__form input {
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+.market-search__form input:focus {
+    color: #fff;
+    border: 1px solid #59a1ed;
+    background-color: transparent;
+}
+.market-search__form input::-webkit-input-placeholder {
+    color: hsla(0, 0%, 100%, 0.8);
+}
+.market-search__form input:-ms-input-placeholder {
+    color: hsla(0, 0%, 100%, 0.8);
+}
+.market-search__form input::placeholder {
+    color: hsla(0, 0%, 100%, 0.8);
+}
+.market-search__filter {
+    margin-top: 32px;
+}
+.market-search__filter .form-group {
+    margin-bottom: 10px;
+}
+.market-search__filter .form-group h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.market-search__filter .form-group .filter-checkbox-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.market-search__filter .form-group .filter-checkbox {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding-left: 1.75rem;
+    margin-bottom: 16px;
+    -webkit-print-color-adjust: exact;
+    align-items: center;
+}
+.market-search__filter
+    .form-group
+    .filter-checkbox-wrap.filter-col-3
+    .filter-checkbox {
+    width: calc(100% / 3);
+}
+.market-search__filter
+    .form-group
+    .filter-checkbox-wrap.filter-col-2
+    .filter-checkbox {
+    width: calc(100% / 2);
+}
+.market-search__filter .form-group .filter-checkbox .filter-checkbox-input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 0;
+    z-index: -1;
+}
+.market-search__filter .form-group .filter-checkbox .filter-checkbox-label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+.market-search__filter
+    .form-group
+    .filter-checkbox
+    .filter-checkbox-label:before {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0;
+    left: -1.75rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: 1px solid #adb5bd;
+}
+.market-search__filter
+    .form-group
+    .filter-checkbox
+    .filter-checkbox-label:after {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0;
+    left: -1.75rem;
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("/assets/images/pages/marketplace/icon-uncheck.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: transparent;
+}
+.market-search__filter
+    .form-group
+    .filter-checkbox
+    .filter-checkbox-input:checked
+    ~ .filter-checkbox-label:before {
+    background-image: url("/assets/images/pages/marketplace/icon-check.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: #59a1ed;
+    border-color: #59a1ed;
+    z-index: 2;
+}
+.market-search__suggest {
+    text-align: right;
+}
+.market-search__suggest__btn {
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+.market-search__suggest__btn input {
+    display: none;
+}
+.search-suggest__btn {
+    border-radius: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: #59a1ed;
+    color: #59a1ed;
+}
+.tab-categories .nav-tabs {
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid #59a1ed;
+}
+
+.tab-categories {
+    justify-content: center;
+    border-color: #59a1ed;
+}
+.tab-categories .nav-item.nav-link {
+    color: #59a1ed;
+}
+.tab-categories .nav-item.nav-link.active,
+.tab-categories .nav-item.nav-link:hover {
+    background-color: #59a1ed;
+    border-color: #59a1ed;
+    color: #fff;
+}
+.tab-categories .nav-item.nav-link:hover {
+    cursor: pointer;
+}
+.tab-categories .nav-item.nav-link:focus {
+    background-color: #59a1ed;
+    border-color: transparent;
+    color: #fff;
+}
+.tab-categories .tab-content {
+    width: 100%;
+}
+.card-gla {
+    background-color: transparent;
+    border: none;
+    width: 330px;
+    margin: auto;
+    padding-top: 20px;
+}
+.card-gla .gla-id {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.card-gla .gla-id .badge {
+    background: -webkit-linear-gradient(135deg, #59a1ed, #59a1ed, #f4ab23);
+    background: linear-gradient(-45deg, #59a1ed, #59a1ed, #f4ab23);
+    background-size: 400% 400%;
+    -webkit-animation: glaid 3s ease infinite;
+    animation: glaid 3s ease infinite;
+    padding: 5px 10px;
+    font-weight: 400;
+    min-width: 80px;
+    font-size: 1rem;
+}
+.card-gla__img {
+    min-height: 365px;
+    z-index: 0;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url("/assets/images/pages/marketplace/place-electric.png");
+}
+.card-gla__img img {
+    width: 100%;
+    /* background-image: url('/assets/images/pages/marketplace/place-electric.png'); */
+}
+.card-gla__gif {
+    min-height: 490px;
+    z-index: 0;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.card-gla__gif img {
+    width: 100%;
+    background-image: url("/assets/images/pages/marketplace/place-electric.gif");
+}
+.card-gla .card-header {
+    margin-top: -60px;
+    min-height: 50px;
+    z-index: 2;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.card-gla .card-body,
+.card-gla .card-header {
+    background-size: 100% 100%;
+    color: #ffffff;
+}
+.card-gla .card-body {
+    margin-top: -50px;
+    min-height: 215px;
+    background-image: url("/assets/images/pages/marketplace/card-market__body.png");
+    padding: 45px 20px 20px;
+    z-index: 1;
+}
+.card-gla .card-body .gla-statis {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+.card-gla .card-body .gla-statis__title {
+    color: #0f82fb;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.card-gla .card-body .gla-statis__value {
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.card-gla .card-body .owner-address {
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: #0f82fb;
+    margin-bottom: 0.75rem;
+}
+.card-gla .card-body .owner-address span {
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+.card-gla .card-body .gla-price {
+    color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.card-gla .card-body .gla-price__coin {
+    margin-right: 0.25rem;
+}
+.card-gla .card-body .gla-price__coin img {
+    width: 2rem;
+}
+.card-gla .card-body .gla-price__value {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.card-gla .card-body .gla-price__value span {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: #ffffff;
+}
+.card-gla .card-footer {
+    background-color: transparent;
+    border: none;
+}
+.card-gla.market .card-gla__img:hover,
+.card-gla.market .gla-id:hover {
+    cursor: pointer;
+}
+.card-gla.market .card-header:hover {
+    cursor: pointer;
+    /* color: #59a1ed; */
+}
+.card-gla.my-gla .card-gla__img:hover,
+.card-gla.my-gla .gla-id:hover {
+    cursor: pointer;
+}
+.card-gla.my-gla .card-header:hover {
+    cursor: pointer;
+    /* color: #59a1ed; */
+}
+.card-gla.my-gla .card-body {
+    min-height: 180px;
+}
+.card-gla.my-gla.farming .card-header {
+    z-index: 2;
+}
+.card-gla.my-gla.farming .farming-badge {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.card-gla.my-gla.farming .farming-badge .badge {
+    background: -webkit-linear-gradient(135deg, #59a1ed, #59a1ed, #f4ab23);
+    background: linear-gradient(-45deg, #59a1ed, #59a1ed, #f4ab23);
+    background-size: 400% 400%;
+    -webkit-animation: glaid 3s ease infinite;
+    animation: glaid 3s ease infinite;
+    padding: 5px 10px;
+    font-weight: 400;
+    min-width: 80px;
+    font-size: 1rem;
+}
+.card-gla.my-gla.farming .farming-axe {
+    width: 250px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 1;
+}
+.card-gla.my-gla-details {
+    margin: auto;
+}
+.card-gla.fight-monster {
+    width: 310px;
+}
+.card-gla.fight-monster .card-gla__gif {
+    min-height: 450px;
+}
+.card-gla.fight-monster .card-body {
+    min-height: 230px;
+}
+.card-gla.fight-monster .card-body .gla-statis {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+.card-gla.fight-monster .card-body .gla-statis__title {
+    color: #501f00;
+    font-size: 1rem;
+}
+.card-gla.fight-monster .card-body .gla-statis__value {
+    color: #59a1ed;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card-gla .gla-id .badge {
+    background: -webkit-linear-gradient(135deg, #59a1ed, #59a1ed, #f4ab23);
+    background: linear-gradient(-45deg, #59a1ed, #59a1ed, #f4ab23);
+    background-size: 400% 400%;
+    -webkit-animation: glaid 3s ease infinite;
+    animation: glaid 3s ease infinite;
+    padding: 5px 10px;
+    font-weight: 400;
+    min-width: 80px;
+    font-size: 1rem;
+    -webkit-transition: color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+}
+@-webkit-keyframes glaid {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0 50%;
+    }
+}
+@keyframes glaid {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0 50%;
+    }
+}
+.btn-approve {
+    color: #fff;
+    background-color: #59a1ed;
+    border-color: #59a1ed;
+    border-radius: 20px;
+}
+.btn-approve:hover {
+    background-color: #59a1ed;
+    border-color: #59a1ed;
+    color: #fff;
+}
+.gla-statis__value span {
+    color: #ffffff;
+}
+.market-footer {
+    text-align: center;
+}
+.market-footer hr {
+    border-top: 1px solid #59a1ed;
+}
+.market-footer .paging {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.market-footer .paging .total-page {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.market-footer .btn-primary-new {
+    border-radius: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.market-footer .btn-primary-new:hover {
+    background: #59a1ed;
+    color: #fff;
+}
+.gla-statis-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.star-rating {
+    padding: 10px 2px;
+    display: flex;
+    height: 41px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.star-rating--item {
+    flex: 1;
+}
+
+.button-buy-mkt {
+    background-image: url("/assets/images/pages/store/btn1.png");
+}
+
+.filter-checkbox-class {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-class {
+    text-align: center;
+}
+
+.footer-paging {
+    display: flex;
+    align-items: center;
+}
+
+div.loader {
+    font-size: 100px;
+    color: white;
+}
+
+.loading-container {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.card-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-price .image-price {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}
+
+.market-list .battle-time {
+    font-size: 16px;
+}
+
+.market-row {
+    height: 50px;
+}
+
+.header-market {
+    height: 80px;
+    position: relative;
+}
+
+.market-id {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.market-anim {
+    bottom: 37px;
+}
+
+.withdraw-container {
+    position: relative;
+}
+
+.withdraw-btn {
+    position: relative;
+    top: 50%;
+    -ms-transform: translate(0, 40%);
+    transform: translate(0, 40%);
+}
+
+.market-search__name {
+    border: solid 1px white;
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+}
