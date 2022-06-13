@@ -1,8 +1,39 @@
 import Image from "next/image";
-import React from "react";
-import { Col } from "react-bootstrap";
+import React, { useState, useContext } from "react";
+import { Col, Modal } from "react-bootstrap";
+import Swal from "sweetalert2";
+
+import { Context as HeroContext } from "../../context/HeroContext";
+import { Context as AuthContext } from "../../context/AuthContext";
 
 export default function ItemFightMonster({ data, heroData, reloadHero }) {
+    const { loadHeroes } = useContext(HeroContext);
+    const { getGold } = useContext(AuthContext);
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = async () => {
+        await loadHeroes();
+        await getGold();
+        setShow(false);
+    };
+
+    const handleBattle = () => {
+        handleBattleResult();
+        setShow(true);
+    };
+
+    const handleBattleResult = () => {
+        loadBattle();
+    };
+
+    const loadBattle = () => {
+        try {
+        } catch (err) {
+            Swal.fire("Battle error!", "", "error");
+        } finally {
+        }
+    };
     return (
         <Col sm={12} md={6} lg={6} xl={3} className="text-center">
             <div className="card-monster card">
@@ -52,13 +83,40 @@ export default function ItemFightMonster({ data, heroData, reloadHero }) {
                     <div className="mt-3">
                         <button
                             className="btn btn-warning btn-block"
-                            onClick={() => {}}
+                            onClick={handleBattle}
                         >
                             Fight
                         </button>
                     </div>
                 </div>
             </div>
+            <Modal
+                show={show}
+                size="lg"
+                className="modal-fighting"
+                backdrop="static"
+                keyboard={false}
+                centered
+                onHide={handleClose}
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>BATTLE</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div className="embed-responsive embed-responsive-16by9">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            className="embed-responsive-item"
+                            src={`/gameplay/index.html?h=${
+                                heroData.class_id - 1
+                            }&m=${data.level}&heroid=${heroData.hero_id}&s=${
+                                heroData.stars
+                            }&l=${heroData.level}`}
+                        ></iframe>
+                    </div>
+                </Modal.Body>
+            </Modal>
         </Col>
     );
 }

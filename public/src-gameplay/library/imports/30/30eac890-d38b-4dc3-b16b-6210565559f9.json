@@ -143,7 +143,7 @@
       }
     }
   },
-  "_atlasText": "\nexport_char.png\nsize: 420,180\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nef/ef_gun/shoot_enemy1\n  rotate: false\n  xy: 2, 2\n  size: 413, 173\n  orig: 543, 180\n  offset: 6, 4\n  index: -1\n",
+  "_atlasText": "\r\nexport_char.png\r\nsize: 420,180\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nef/ef_gun/shoot_enemy1\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 413, 173\r\n  orig: 543, 180\r\n  offset: 6, 4\r\n  index: -1\r\n",
   "textures": [
     {
       "__uuid__": "11031b4b-c145-4a58-b43f-f52adbcbb94b"
