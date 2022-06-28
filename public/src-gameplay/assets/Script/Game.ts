@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const instance = axios.create({
   withCredentials: true,
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "http://localhost:8000",
 });
 
 window.hero = 1;
@@ -361,7 +361,7 @@ export default class Game extends cc.Component {
 
   async battle() {
     try {
-      const res = await instance.post("/hero/battle", {
+      const res = await instance.post("/battle/", {
         hero_id: parseInt(window.heroId),
         monster_id: window.monster + 1,
       });

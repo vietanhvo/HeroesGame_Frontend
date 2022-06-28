@@ -62,7 +62,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var axios = require("axios");
 var instance = axios.create({
     withCredentials: true,
-    baseURL: "http://127.0.0.1:8000",
+    baseURL: "http://localhost:8000",
 });
 window.hero = 1;
 window.monster = 0;
@@ -400,7 +400,7 @@ var Game = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, instance.post("/hero/battle", {
+                        return [4 /*yield*/, instance.post("/battle/", {
                                 hero_id: parseInt(window.heroId),
                                 monster_id: window.monster + 1,
                             })];

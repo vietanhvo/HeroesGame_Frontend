@@ -52,7 +52,7 @@ export default function Register() {
                 <Col lg={8} className="mx-auto">
                     <div className="form-container">
                         <div className="form-title">Register Form</div>
-                        <div className="form-subtitle">It's quick and easy</div>
+                        <div className="form-subtitle">It is quick and easy</div>
                         <Formik
                             initialValues={initialValues}
                             validationSchema={registerSchema}
